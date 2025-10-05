@@ -52,12 +52,30 @@ strong {
   color: hsl(221, 14%, 21%);
 }
 
+@keyframes mesh-wave {
+  0%, 100% {
+    transform: perspective(800px) rotateX(8deg) scale(1.1) translateY(0);
+  }
+  50% {
+    transform: perspective(800px) rotateX(8deg) scale(1.1) translateY(-3px);
+  }
+}
+
+@keyframes mesh-subtle-rotate {
+  0%, 100% {
+    transform: perspective(800px) rotateX(8deg) rotateZ(0deg) scale(1.1);
+  }
+  50% {
+    transform: perspective(800px) rotateX(8deg) rotateZ(0.3deg) scale(1.1);
+  }
+}
+
 .hero {
   position: relative;
   background: linear-gradient(135deg, #9DBBF8 0%, #7BA3F0 50%, #5A8BE8 100%);
   overflow: hidden;
 
-  // More visible mesh grid overlay
+  // More visible mesh grid overlay with subtle animation
   &::before {
     content: '';
     position: absolute;
@@ -83,6 +101,7 @@ strong {
     opacity: 1;
     transform: perspective(800px) rotateX(8deg) scale(1.1);
     transform-origin: center top;
+    animation: mesh-subtle-rotate 20s ease-in-out infinite;
   }
 
   // Gradient overlay for depth

@@ -269,10 +269,12 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="flex justify-center p-12 mb-8">
-            <div className="bg-signal-bg border border-signal-border-weak w-full max-w-4xl p-12 rounded-md text-center shadow-sm">
-              <p className="text-signal-text-weak">[Flowchart placeholder: How Cashu tokens flow between Signal users]</p>
-            </div>
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/ecash-how-flowchart.png" 
+              alt="Flowchart showing how Cashu tokens flow between Signal users" 
+              className="w-full max-w-4xl h-auto"
+            />
           </div>
         </div>
 
