@@ -166,6 +166,37 @@ export default function Home() {
             </div>
           </section>
 
+          <div className="pt-12 pb-12 text-center space-y-8">
+            <h2 className="text-signal-blue" id="demo">See It In Action</h2>
+
+            <p className="max-w-4xl mx-auto">
+              The Signal + Cashu fork was built during the Bitcoin++ Lightning Hackathon in Berlin.
+              Below are placeholders for demo videos and screenshots showcasing the integration.
+            </p>
+
+            <div className="flex flex-col space-y-8 pb-12">
+              <div className="flex flex-col items-center space-y-4">
+                <h4 className="font-semibold text-signal-text-strong">Demo Video</h4>
+                <video 
+                  className="w-full max-w-4xl aspect-video rounded-md shadow-sm" 
+                  controls
+                  poster="/ecash-how-flowchart.png"
+                >
+                  <source src="/bump-cash-wide.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p className="text-center text-signal-text max-w-4xl">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
+              </div>
+              
+              <div className="flex flex-col items-center space-y-4">
+                <div className="bg-signal-bg border border-signal-border-weak w-full max-w-4xl aspect-video flex items-center justify-center rounded-md shadow-sm">
+                  <p className="text-signal-text-weak text-sm">[Screenshot placeholder: Signal chat with Cashu payment]</p>
+                </div>
+                <p className="text-center text-signal-text max-w-4xl">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
+              </div>
+            </div>
+          </div>
+
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
               <h2 className="text-signal-blue" id="privacy">Privacy Deep Dive</h2>
@@ -218,38 +249,6 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="pt-12 pb-12 text-center space-y-8">
-            <h2 className="text-signal-blue" id="demo">See It In Action</h2>
-
-            <p className="max-w-4xl mx-auto">
-              The Signal + Cashu fork was built during the Bitcoin++ Lightning Hackathon in Berlin.
-              Below are placeholders for demo videos and screenshots showcasing the integration.
-            </p>
-
-            <div className="flex flex-col space-y-8 pb-12">
-              <div className="flex flex-col items-center space-y-4">
-                <h4 className="font-semibold text-signal-text-strong">Demo Video</h4>
-                <video 
-                  className="w-full max-w-4xl aspect-video rounded-md shadow-sm" 
-                  controls
-                  poster="/ecash-how-flowchart.png"
-                >
-                  <source src="/bump-cash-wide.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <p className="text-center text-signal-text max-w-4xl">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
-              </div>
-              
-              <div className="flex flex-col items-center space-y-4">
-                <h4 className="font-semibold text-signal-text-strong">Screenshots</h4>
-                <div className="bg-signal-bg border border-signal-border-weak w-full max-w-4xl aspect-video flex items-center justify-center rounded-md shadow-sm">
-                  <p className="text-signal-text-weak text-sm">[Screenshot placeholder: Signal chat with Cashu payment]</p>
-                </div>
-                <p className="text-center text-signal-text max-w-4xl">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
-              </div>
-            </div>
-          </div>
-
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
               <h2 className="text-signal-blue" id="how">How It Works</h2>
@@ -257,7 +256,7 @@ export default function Home() {
               <h3>Technical Overview for Developers</h3>
 
               <p>
-                The Signal + Cashu integration built at the Berlin hackathon works by embedding a lightweight
+                The Signal + Cashu integration works by embedding a lightweight
                 Cashu wallet directly into the Signal app. Users connect to a Cashu mint (which acts as a
                 custodian for bitcoin) and can mint, send, and receive ecash tokens.
               </p>
@@ -280,10 +279,29 @@ export default function Home() {
               </p>
             </div>
             <div className="basis-6/12 flex justify-center p-6">
-              <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
-                <div className="bg-white p-4 drop-shadow-xl rotate-[-12deg] flex items-center justify-center">
-                  <p className="text-sm text-gray-700">[Diagram placeholder: Cashu flow in Signal]</p>
+              <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
+                <h4 className="font-semibold text-signal-text-strong mb-3">Implementation Details</h4>
+                <p className="text-sm text-signal-text mb-3">
+                  Key data structures and serialization formats:
+                </p>
+                <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded border">
+                  <div><strong>Token Format (V4):</strong></div>
+                  <div className="text-xs">
+                    <code className="bg-gray-100 px-1 rounded">cashuB[base64_cbor]</code>
+                  </div>
+                  <div className="mt-3"><strong>Core Data Structures:</strong></div>
+                  <div>• <code className="bg-gray-100 px-1 rounded">Proof</code>: amount, secret, signature</div>
+                  <div>• <code className="bg-gray-100 px-1 rounded">BlindedMessage</code>: amount, id, B_</div>
+                  <div>• <code className="bg-gray-100 px-1 rounded">BlindSignature</code>: amount, id, C_</div>
+                  <div className="mt-3"><strong>Serialization:</strong></div>
+                  <div>• CBOR binary format for efficiency</div>
+                  <div>• Base64 URL-safe encoding</div>
+                  <div>• Single mint per token (V4)</div>
                 </div>
+                <p className="text-xs text-signal-text-weak mt-3">
+                  V4 tokens use space-efficient CBOR encoding with single-character field names. 
+                  Full specifications available in <a href="https://cashubtc.github.io/nuts/00/" className="text-blue-600 hover:underline">NUT-00</a>.
+                </p>
               </div>
             </div>
           </section>
@@ -336,9 +354,6 @@ export default function Home() {
                 <li>Attract millions of bitcoin users who share Signal's values around privacy and freedom</li>
                 <li>Position Signal as the premier private communication and payment platform</li>
               </ul>
-              <p className="mt-4 text-signal-text">
-                The hackathon proof-of-concept shows this is technically viable. Let's make it a reality.
-              </p>
             </div>
           </div>
 
@@ -417,7 +432,7 @@ export default function Home() {
               <div>
                 <h3>Will Signal actually do this?</h3>
                 <p>
-                  That depends on community demand. This site and the hackathon proof-of-concept are advocacy
+                  That depends on community demand. This site and the proof-of-concept are advocacy
                   tools to show Signal that there's real interest. If enough users, developers, and privacy
                   advocates speak up, Signal may consider integrating Cashu or a similar bitcoin privacy solution.
                 </p>
