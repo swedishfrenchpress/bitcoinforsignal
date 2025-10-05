@@ -87,21 +87,21 @@ export default function Home() {
           <div className="min-w-[156px] min-h-[156px]">
             <BitcoinCircleIcon
               style={{ width: "156px", height: "156px" }}
-              className="mb-12 drop-shadow-md"
+              className="mb-12"
             />
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-12 drop-shadow-md">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-12">
             Bitcoin Belongs in Signal
           </h1>
 
-          <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium drop-shadow-md mb-24 max-w-5xl">
+          <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-24 max-w-5xl">
             Private messaging meets private money.
             Cashu ecash enables truly private bitcoin payments
             inside the world's most trusted encrypted messenger.
           </h3>
 
-          <svg width="78" height="126" viewBox="0 0 78 126" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-md hero-scroll min-w-[96px] min-h-[126px]">
+          <svg width="78" height="126" viewBox="0 0 78 126" fill="none" xmlns="http://www.w3.org/2000/svg" className="hero-scroll min-w-[96px] min-h-[126px]">
             <path d="M42 14C42 12.3431 40.6569 11 39 11C37.3431 11 36 12.3431 36 14H42ZM36.8787 101.121C38.0503 102.293 39.9497 102.293 41.1213 101.121L60.2132 82.0294C61.3848 80.8579 61.3848 78.9584 60.2132 77.7868C59.0416 76.6152 57.1421 76.6152 55.9706 77.7868L39 94.7574L22.0294 77.7868C20.8579 76.6152 18.9584 76.6152 17.7868 77.7868C16.6152 78.9584 16.6152 80.8579 17.7868 82.0294L36.8787 101.121ZM36 14V99H42V14H36Z" fill="white"/>
           </svg>
         </div>
