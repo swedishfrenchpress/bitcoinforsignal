@@ -178,9 +178,9 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>Chaumian blind signatures</strong> mean that when you mint ecash tokens, the mint cannot
-                link those tokens back to you when you later spend them. This is cryptographic privacy, not just
-                anonymity through obscurity.
+                <strong>Chaumian blind signatures with Blind Diffie-Hellmann Key Exchange (BDHKE)</strong> ensure 
+                that when you mint ecash tokens, the mint cannot link those tokens back to you when you later spend them. 
+                This is cryptographic privacy, not just anonymity through obscurity.
               </p>
 
               <p>
@@ -195,8 +195,25 @@ export default function Home() {
               </p>
             </div>
             <div className="basis-6/12 flex justify-center p-6">
-              <div className="bg-bpr-orange w-[240px] h-[240px] md:w-[340px] md:h-[340px]">
-                <img src="qr-bip21-bolt11.png" alt="Privacy illustration" className="drop-shadow-xl rotate-[-12deg]" />
+              <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
+                <h4 className="font-semibold text-signal-text-strong mb-3">The Math Behind the Privacy</h4>
+                <p className="text-sm text-signal-text mb-3">
+                  Cashu uses Blind Diffie-Hellmann Key Exchange (BDHKE) to achieve unlinkability:
+                </p>
+                <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded border">
+                  <div>1. Mint <code className="bg-gray-100 px-1 rounded">Bob</code> publishes public key <code className="bg-gray-100 px-1 rounded">K = kG</code></div>
+                  <div>2. <code className="bg-gray-100 px-1 rounded">Alice</code> picks secret <code className="bg-gray-100 px-1 rounded">x</code> and computes <code className="bg-gray-100 px-1 rounded">Y = hash_to_curve(x)</code></div>
+                  <div>3. <code className="bg-gray-100 px-1 rounded">Alice</code> sends to <code className="bg-gray-100 px-1 rounded">Bob</code>: <code className="bg-gray-100 px-1 rounded">B_ = Y + rG</code> with <code className="bg-gray-100 px-1 rounded">r</code> being a random blinding factor</div>
+                  <div>4. <code className="bg-gray-100 px-1 rounded">Bob</code> sends back to <code className="bg-gray-100 px-1 rounded">Alice</code> blinded key: <code className="bg-gray-100 px-1 rounded">C_ = kB_</code></div>
+                  <div>5. <code className="bg-gray-100 px-1 rounded">Alice</code> can calculate the unblinded key as <code className="bg-gray-100 px-1 rounded">C_ - rK = kY + krG - krG = kY = C</code></div>
+                  <div>6. <code className="bg-gray-100 px-1 rounded">Alice</code> can take the pair <code className="bg-gray-100 px-1 rounded">(x, C)</code> as a token and can send it to <code className="bg-gray-100 px-1 rounded">Carol</code></div>
+                  <div>7. <code className="bg-gray-100 px-1 rounded">Carol</code> can send <code className="bg-gray-100 px-1 rounded">(x, C)</code> to <code className="bg-gray-100 px-1 rounded">Bob</code> who then checks that <code className="bg-gray-100 px-1 rounded">k*hash_to_curve(x) == C</code>, and if so treats it as a valid spend</div>
+                </div>
+                <p className="text-xs text-signal-text-weak mt-3">
+                  Where G is the generator point, k is the mint's private key, and the blinding factor r ensures 
+                  the mint cannot correlate the blinded request with the final token. The mint can verify tokens 
+                  without knowing who originally minted them.
+                </p>
               </div>
             </div>
           </section>
