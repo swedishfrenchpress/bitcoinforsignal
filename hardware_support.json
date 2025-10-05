@@ -1,0 +1,106 @@
+[
+  {
+    "hardware": {
+      "name": "iPhone XS",
+      "uri": "https://support.apple.com/kb/SP779"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Muun",
+          "uri": "https://muun.com/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Phoenix",
+          "uri": "https://phoenix.acinq.co/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      },
+      {
+        "wallet": {
+          "name": "Zeus",
+          "uri": "https://zeusln.app/"
+        },
+        "scans": "yes",
+        "description": "Works perfectly.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      }
+    ]
+  },
+  {
+    "hardware": {
+      "name": "Samsung Galaxy A12",
+      "uri": "https://www.samsung.com/us/mobile/phones/galaxy-a/galaxy-a12-unlocked-sm-a125uzkdxaa/"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Muun",
+          "uri": "https://muun.com/"
+        },
+        "scans": "yes",
+        "description": "Works very good. It is capable of reading the QR from a surprising distance. If the QR takes up a quarter to a half the width of the screen, it will take a second to refocus and then scan. The closer the QR is to the camera, the faster it works.",
+        "credit": {
+          "name": "@sbddesign",
+          "uri": "https://github.com/sbddesign"
+        }
+      }
+    ]
+  },
+  {
+    "hardware": {
+      "name": "iPhone 11",
+      "uri": "https://www.apple.com/uk/shop/buy-iphone/iphone-11"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "Phoenix",
+          "uri": "https://phoenix.acinq.co"
+        },
+        "scans": "yes",
+        "description": "Works very good",
+        "credit": {
+          "name": "@ConorOkus",
+          "uri": "https://github.com/conorokus"
+        }
+      }
+    ]
+  },
+  {
+    "hardware": {
+      "name": "iPhone 8",
+      "uri": "https://support.apple.com/kb/SP767"
+    },
+    "software": [
+      {
+        "wallet": {
+          "name": "BlueWallet",
+          "uri": "https://bluewallet.io/"
+        },
+        "scans": "yes",
+        "description": "Scans well.",
+        "credit": {
+          "name": "@pavlenex",
+          "uri": "https://github.com/pavlenex"
+        }
+      }
+    ]
+  }
+]
