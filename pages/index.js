@@ -62,8 +62,12 @@ export default function Home() {
         <header className="fixed top-0 w-full left-0 z-[48] lg:flex lg:flex-row lg:bg-white lg:justify-center lg:items-center">
           <div className="controls flex flex-row justify-between p-4 bg-white z-[50] relative">
             <a href="/">
-              <BitcoinCircleIconOutline className="logo text-black w-12 h-12 lg:w-8 lg:h-8" />
-              <span className="sr-only">Cashu for Signal</span>
+              <img 
+                src="/b4s-logo.svg" 
+                alt="Bitcoin for Signal" 
+                className="logo w-12 h-12 lg:w-8 lg:h-8"
+              />
+              <span className="sr-only">Bitcoin for Signal</span>
             </a>
             <MenuIcon className="menu-toggle text-black w-12 h-12 lg:hidden" onClick={toggleMenu} />
           </div>
@@ -153,7 +157,7 @@ export default function Home() {
             </div>
 
             <div className="basis-6/12 pt-6 md:p-6 flex justify-center">
-              <img src="problem-ui.svg" alt="Signal needs private bitcoin" className="xl:w-8/12" />
+              <img src="/signal-hidden.jpg" alt="Signal needs private bitcoin" className="xl:w-8/12" />
             </div>
           </section>
 
@@ -182,7 +186,7 @@ export default function Home() {
             </div>
 
             <div className="basis-6/12 pt-6 md:p-6 flex justify-center items-center">
-              <img src="single-qr.svg" alt="Cashu + Signal integration" className="xl:w-8/12" />
+              <img src="/signal-hidden.jpg" alt="Cashu + Signal integration" className="xl:w-8/12" />
             </div>
           </section>
 
@@ -209,9 +213,11 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col items-center space-y-4">
-                <div className="bg-signal-bg border border-signal-border-weak w-full max-w-4xl aspect-video flex items-center justify-center rounded-md shadow-sm">
-                  <p className="text-signal-text-weak text-sm">[Screenshot placeholder: Signal chat with Cashu payment]</p>
-                </div>
+                <img 
+                  src="/signal-wide.png" 
+                  alt="Signal chat with Cashu payment interface" 
+                  className="w-full max-w-4xl h-auto"
+                />
                 <p className="text-center text-signal-text max-w-4xl">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
               </div>
             </div>

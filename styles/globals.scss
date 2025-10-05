@@ -63,10 +63,16 @@ strong {
 
 @keyframes mesh-subtle-rotate {
   0%, 100% {
-    transform: perspective(800px) rotateX(8deg) rotateZ(0deg) scale(1.1);
+    transform: perspective(1000px) rotateX(5deg) rotateZ(0deg) scale(1.05);
+  }
+  25% {
+    transform: perspective(1000px) rotateX(5deg) rotateZ(0.2deg) scale(1.06);
   }
   50% {
-    transform: perspective(800px) rotateX(8deg) rotateZ(0.3deg) scale(1.1);
+    transform: perspective(1000px) rotateX(4deg) rotateZ(0deg) scale(1.05);
+  }
+  75% {
+    transform: perspective(1000px) rotateX(5deg) rotateZ(-0.2deg) scale(1.06);
   }
 }
 
@@ -86,10 +92,14 @@ strong {
 
 .hero {
   position: relative;
-  background: linear-gradient(135deg, #9DBBF8 0%, #7BA3F0 50%, #5A8BE8 100%);
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
 
-  // More visible mesh grid overlay with subtle animation
+  // Elegant subtle grid overlay
   &::before {
     content: '';
     position: absolute;
@@ -100,25 +110,25 @@ strong {
     background-image:
       repeating-linear-gradient(
         0deg,
-        rgba(255, 255, 255, 0.15) 0px,
-        rgba(255, 255, 255, 0.15) 1px,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
         transparent 1px,
-        transparent 50px
+        transparent 60px
       ),
       repeating-linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.15) 0px,
-        rgba(255, 255, 255, 0.15) 1px,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
         transparent 1px,
-        transparent 50px
+        transparent 60px
       );
     opacity: 1;
-    transform: perspective(800px) rotateX(8deg) scale(1.1);
+    transform: perspective(1000px) rotateX(5deg) scale(1.05);
     transform-origin: center top;
-    animation: mesh-subtle-rotate 20s ease-in-out infinite;
+    animation: mesh-subtle-rotate 30s ease-in-out infinite;
   }
 
-  // Gradient overlay for depth
+  // Sophisticated overlay with subtle noise
   &::after {
     content: '';
     position: absolute;
@@ -126,11 +136,22 @@ strong {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(
-      ellipse at center top,
-      transparent 0%,
-      rgba(90, 139, 232, 0.3) 100%
-    );
+    background: 
+      radial-gradient(
+        ellipse at 50% 0%,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse at 0% 100%,
+        rgba(120, 119, 198, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 100% 100%,
+        rgba(255, 255, 255, 0.05) 0%,
+        transparent 50%
+      );
     pointer-events: none;
   }
 
@@ -140,7 +161,7 @@ strong {
     z-index: 1;
   }
 
-  // Remove text shadows
+  // Clean text without shadows
   h1, h3, p, svg {
     text-shadow: none !important;
     filter: none !important;
@@ -297,6 +318,7 @@ section {
 
     .logo {
       @apply text-white;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
     }
 
     .menu-toggle {
