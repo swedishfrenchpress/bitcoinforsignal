@@ -109,7 +109,7 @@ export default function Home() {
         <div className="container mx-auto px-12 max-w-screen-xl">
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-pink" id="problem">The Problem</h2>
+              <h2 className="text-signal-blue" id="problem">The Problem</h2>
 
               <h3>
                 Signal integrated MobileCoin, but it hasn't seen meaningful adoption. Bitcoin is the obvious alternative.
@@ -139,13 +139,13 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-bpr-orange" id="solution">The Solution</h2>
+              <h2 className="text-signal-primary" id="solution">The Solution</h2>
 
               <h3>Cashu Ecash + Signal = Private Bitcoin Payments</h3>
 
               <p>
                 At the Bitcoin++ Lightning Hackathon in Berlin, two developers built a working fork of Signal
-                that natively integrates <a href="https://cashu.space" className="text-bpr-cyan font-medium">Cashu ecash</a>.
+                that natively integrates <a href="https://cashu.space">Cashu ecash</a>.
                 This proof-of-concept demonstrates that private bitcoin payments can work seamlessly inside Signal.
               </p>
 
@@ -168,7 +168,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
-              <h2 className="text-bpr-blue" id="privacy">Privacy Deep Dive</h2>
+              <h2 className="text-signal-blue" id="privacy">Privacy Deep Dive</h2>
 
               <h3>Why Cashu is a perfect match for Signal</h3>
 
@@ -202,30 +202,30 @@ export default function Home() {
           </section>
 
           <div className="pt-12 pb-12 text-center space-y-8">
-            <h2 className="text-bpr-pink" id="demo">See It In Action</h2>
+            <h2 className="text-signal-blue" id="demo">See It In Action</h2>
 
             <p className="max-w-4xl mx-auto">
               The Signal + Cashu fork was built during the Bitcoin++ Lightning Hackathon in Berlin.
               Below are placeholders for demo videos and screenshots showcasing the integration.
             </p>
 
-            <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0 pb-12 lg:justify-around">
+            <div className="flex flex-col space-y-8 md:flex-row md:space-x-6 md:space-y-0 pb-12 lg:justify-around">
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <div className="flex flex-col items-center space-y-4 px-4">
-                  <h4>Demo Video</h4>
-                  <div className="bg-gray-200 w-full aspect-video flex items-center justify-center">
-                    <p className="text-gray-600">[Video placeholder: Sending Cashu ecash in Signal]</p>
+                  <h4 className="font-semibold text-signal-text-strong">Demo Video</h4>
+                  <div className="bg-signal-bg border border-signal-border-weak w-full aspect-video flex items-center justify-center rounded-md shadow-sm">
+                    <p className="text-signal-text-weak text-sm">[Video placeholder: Sending Cashu ecash in Signal]</p>
                   </div>
-                  <p className="text-left">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
+                  <p className="text-left text-signal-text">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
                 </div>
               </div>
               <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
                 <div className="flex flex-col items-center space-y-4 px-4">
-                  <h4>Screenshots</h4>
-                  <div className="bg-gray-200 w-full aspect-video flex items-center justify-center">
-                    <p className="text-gray-600">[Screenshot placeholder: Signal chat with Cashu payment]</p>
+                  <h4 className="font-semibold text-signal-text-strong">Screenshots</h4>
+                  <div className="bg-signal-bg border border-signal-border-weak w-full aspect-video flex items-center justify-center rounded-md shadow-sm">
+                    <p className="text-signal-text-weak text-sm">[Screenshot placeholder: Signal chat with Cashu payment]</p>
                   </div>
-                  <p className="text-left">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
+                  <p className="text-left text-signal-text">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
                 </div>
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
-              <h2 className="text-bpr-blue" id="how">How It Works</h2>
+              <h2 className="text-signal-blue" id="how">How It Works</h2>
 
               <h3>Technical Overview for Developers</h3>
 
@@ -256,8 +256,8 @@ export default function Home() {
 
               <p>
                 <strong>Open source:</strong> The proof-of-concept code is available for developers to review,
-                test, and build upon. Learn more about the <a href="https://cashu.space" className="text-bpr-cyan font-medium">Cashu protocol</a> and
-                the <a href="https://github.com/cashubtc" className="text-bpr-cyan font-medium">Cashu specification</a>.
+                test, and build upon. Learn more about the <a href="https://cashu.space">Cashu protocol</a> and
+                the <a href="https://github.com/cashubtc">Cashu specification</a>.
               </p>
             </div>
             <div className="basis-6/12 flex justify-center p-6">
@@ -270,24 +270,24 @@ export default function Home() {
           </section>
 
           <div className="flex justify-center p-12 mb-8">
-            <div className="bg-gray-200 w-full max-w-4xl p-8 rounded text-center">
-              <p className="text-gray-600">[Flowchart placeholder: How Cashu tokens flow between Signal users]</p>
+            <div className="bg-signal-bg border border-signal-border-weak w-full max-w-4xl p-12 rounded-md text-center shadow-sm">
+              <p className="text-signal-text-weak">[Flowchart placeholder: How Cashu tokens flow between Signal users]</p>
             </div>
           </div>
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
-          <h2 className="text-bpr-orange" id="action">Take Action</h2>
+          <h2 className="text-signal-primary" id="action">Take Action</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
             This proof-of-concept demonstrates that Cashu + Signal is technically feasible.
             Now we need to show Signal that there's demand for this integration.
           </p>
 
-          <div className="max-w-screen-lg pt-8 space-y-8">
-            <div className="bg-slate-100 p-8 rounded-lg space-y-4">
-              <h3 className="text-2xl font-bold">For Signal Users</h3>
-              <ul className="list-disc ml-8 space-y-2">
+          <div className="max-w-screen-lg pt-8 space-y-6">
+            <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
+              <h3 className="text-2xl font-semibold text-signal-text-strong">For Signal Users</h3>
+              <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Share this site with your Signal contacts and on social media</li>
                 <li>Contact Signal support and express your interest in bitcoin payments</li>
                 <li>Try the Signal + Cashu fork (link to come) and provide feedback</li>
@@ -295,29 +295,29 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="bg-slate-100 p-8 rounded-lg space-y-4">
-              <h3 className="text-2xl font-bold">For Developers</h3>
-              <ul className="list-disc ml-8 space-y-2">
+            <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
+              <h3 className="text-2xl font-semibold text-signal-text-strong">For Developers</h3>
+              <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Review the Signal + Cashu proof-of-concept code (repository link to come)</li>
                 <li>Test the fork and contribute improvements</li>
                 <li>Help refine the UX and security model</li>
                 <li>Build complementary tools (mint infrastructure, testing tools, etc.)</li>
-                <li>Learn about <a href="https://cashu.space" className="text-bpr-cyan font-medium">Cashu</a> and contribute to the broader ecosystem</li>
+                <li>Learn about <a href="https://cashu.space">Cashu</a> and contribute to the broader ecosystem</li>
               </ul>
             </div>
 
-            <div className="bg-slate-100 p-8 rounded-lg space-y-4">
-              <h3 className="text-2xl font-bold">For Decision Makers at Signal</h3>
-              <p>
+            <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
+              <h3 className="text-2xl font-semibold text-signal-text-strong">For Decision Makers at Signal</h3>
+              <p className="text-signal-text">
                 We believe Cashu ecash aligns perfectly with Signal's mission. This integration would:
               </p>
-              <ul className="list-disc ml-8 space-y-2">
+              <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Replace the underutilized MobileCoin integration with the world's most liquid cryptocurrency</li>
                 <li>Maintain Signal's uncompromising privacy standards through Chaumian blind signatures</li>
                 <li>Attract millions of bitcoin users who share Signal's values around privacy and freedom</li>
                 <li>Position Signal as the premier private communication and payment platform</li>
               </ul>
-              <p className="mt-4">
+              <p className="mt-4 text-signal-text">
                 The hackathon proof-of-concept shows this is technically viable. Let's make it a reality.
               </p>
             </div>
@@ -327,22 +327,22 @@ export default function Home() {
             <h3 className="text-2xl">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <a href="https://cashu.space" className="text-bpr-cyan font-medium">
+                <a href="https://cashu.space">
                   Cashu Protocol Documentation
                 </a>
               </li>
               <li>
-                <a href="https://github.com/cashubtc" className="text-bpr-cyan font-medium">
+                <a href="https://github.com/cashubtc">
                   Cashu GitHub Organization
                 </a>
               </li>
               <li>
-                <a href="#" className="text-bpr-cyan font-medium">
+                <a href="#">
                   Signal + Cashu Fork Repository (coming soon)
                 </a>
               </li>
               <li>
-                <a href="#" className="text-bpr-cyan font-medium">
+                <a href="#">
                   Open Letter to Signal (coming soon)
                 </a>
               </li>
@@ -351,7 +351,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-12 max-w-screen-xl">
-          <h2 className="text-bpr-purple mb-4" id="faq">FAQ</h2>
+          <h2 className="text-signal-blue mb-4" id="faq">FAQ</h2>
           <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
             <div className="basis-6/12 space-y-6">
               <div>
@@ -417,29 +417,29 @@ export default function Home() {
         </div>
           
         <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
-          <h2 className="text-bpr-pink">Join the Movement</h2>
+          <h2 className="text-signal-blue">Join the Movement</h2>
           <p className="text-xl">
             This is a grassroots advocacy campaign to bring private bitcoin payments to Signal.
             Follow updates, contribute code, and join the conversation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="https://github.com/cashubtc">
-              <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange hover:bg-bpr-orange hover:text-white transition">
+              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
                 GitHub
               </div>
             </a>
             <a href="https://t.me/CashuBTC">
-              <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange hover:bg-bpr-orange hover:text-white transition">
+              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
                 Telegram
               </div>
             </a>
             <a href="https://discord.gg/qKadAAQH">
-              <div className="border-4 border-bpr-orange p-4 text-xl text-bpr-orange hover:bg-bpr-orange hover:text-white transition">
+              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
                 Discord
               </div>
             </a>
           </div>
-          <p className="text-sm text-gray-600 pt-8">
+          <p className="text-sm text-signal-text-light pt-8">
             Built with ❤️ by the Bitcoin privacy community • Proof-of-concept from Bitcoin++ Berlin
           </p>
         </div>
