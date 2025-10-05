@@ -209,24 +209,26 @@ export default function Home() {
               Below are placeholders for demo videos and screenshots showcasing the integration.
             </p>
 
-            <div className="flex flex-col space-y-8 md:flex-row md:space-x-6 md:space-y-0 pb-12 lg:justify-around">
-              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
-                <div className="flex flex-col items-center space-y-4 px-4">
-                  <h4 className="font-semibold text-signal-text-strong">Demo Video</h4>
-                  <div className="bg-signal-bg border border-signal-border-weak w-full aspect-video flex items-center justify-center rounded-md shadow-sm">
-                    <p className="text-signal-text-weak text-sm">[Video placeholder: Sending Cashu ecash in Signal]</p>
-                  </div>
-                  <p className="text-left text-signal-text">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
-                </div>
+            <div className="flex flex-col space-y-8 pb-12">
+              <div className="flex flex-col items-center space-y-4">
+                <h4 className="font-semibold text-signal-text-strong">Demo Video</h4>
+                <video 
+                  className="w-full max-w-4xl aspect-video rounded-md shadow-sm" 
+                  controls
+                  poster="/ecash-how-flowchart.png"
+                >
+                  <source src="/bump-cash-wide.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p className="text-center text-signal-text max-w-4xl">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
               </div>
-              <div className="basis-6/12 lg:basis-5/12 xl:basis-4/12">
-                <div className="flex flex-col items-center space-y-4 px-4">
-                  <h4 className="font-semibold text-signal-text-strong">Screenshots</h4>
-                  <div className="bg-signal-bg border border-signal-border-weak w-full aspect-video flex items-center justify-center rounded-md shadow-sm">
-                    <p className="text-signal-text-weak text-sm">[Screenshot placeholder: Signal chat with Cashu payment]</p>
-                  </div>
-                  <p className="text-left text-signal-text">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
+              
+              <div className="flex flex-col items-center space-y-4">
+                <h4 className="font-semibold text-signal-text-strong">Screenshots</h4>
+                <div className="bg-signal-bg border border-signal-border-weak w-full max-w-4xl aspect-video flex items-center justify-center rounded-md shadow-sm">
+                  <p className="text-signal-text-weak text-sm">[Screenshot placeholder: Signal chat with Cashu payment]</p>
                 </div>
+                <p className="text-center text-signal-text max-w-4xl">The UI is clean and native to Signal, making bitcoin payments feel as natural as sending a message.</p>
               </div>
             </div>
           </div>
@@ -292,7 +294,6 @@ export default function Home() {
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Share this site with your Signal contacts and on social media</li>
                 <li>Contact Signal support and express your interest in bitcoin payments</li>
-                <li>Try the Signal + Cashu fork (link to come) and provide feedback</li>
                 <li>Advocate for privacy-preserving bitcoin integration in Signal forums</li>
               </ul>
             </div>
@@ -301,7 +302,6 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Developers</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Review the Signal + Cashu proof-of-concept code (repository link to come)</li>
-                <li>Test the fork and contribute improvements</li>
                 <li>Help refine the UX and security model</li>
                 <li>Build complementary tools (mint infrastructure, testing tools, etc.)</li>
                 <li>Learn about <a href="https://cashu.space">Cashu</a> and contribute to the broader ecosystem</li>
