@@ -240,13 +240,13 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>Chaumian blind signatures with Blind Diffie-Hellmann Key Exchange (BDHKE)</strong> ensure 
+                <strong>Chaumian blind signatures</strong> ensure 
                 that when you mint ecash tokens, the mint cannot link those tokens back to you when you later spend them. 
                 This is cryptographic privacy, not just anonymity through obscurity.
               </p>
 
               <p>
-                <strong>No metadata leakage.</strong> Bitcoin's base layer exposes amounts, addresses, and timing.
+                <strong>No metadata leakage</strong> through Cashu mints. Bitcoin's base layer exposes amounts, addresses, and timing.
                 Lightning is better, but still reveals payment channel relationships. Cashu tokens can be sent
                 peer-to-peer with zero on-chain footprint and no revealing metadata.
               </p>
@@ -287,51 +287,54 @@ export default function Home() {
               <h3>Technical Overview for Developers</h3>
 
               <p>
-                The Signal + Cashu integration works by embedding a lightweight
+                <strong>The Signal + Cashu integration</strong> works by embedding a lightweight
                 Cashu wallet directly into the Signal app. Users connect to a Cashu mint (which acts as a
                 custodian for bitcoin) and can mint, send, and receive ecash tokens.
               </p>
 
               <p>
-                <strong>Sending payments:</strong> Users select an amount, the app generates a Cashu token, and
-                sends it as an encrypted message. The recipient's Signal app automatically detects the token and
-                adds it to their balance.
+                <strong>Ecash is stored locally</strong> and wallets store user balances locally on their device. When a user sends a payment, the app generates a Cashu token, and sends it as an encrypted message. The recipient's Signal app automatically detects the token and adds it to their balance.
               </p>
 
               <p>
-                <strong>Privacy mechanics:</strong> The mint uses blind signatures to ensure it cannot link tokens
-                to specific users. Signal's end-to-end encryption ensures that metadata about payments stays private.
+                <strong>Mints on Bitcoin</strong> enable payments through Lightning. Users can send and receive payments from anyone, anywhere, at any time. Whether its from another Signal contact, or a merchant that accepts Bitcoin.
               </p>
 
               <p>
-                <strong>Open source:</strong> The proof-of-concept code is available for developers to review,
-                test, and build upon. Learn more about the <a href="https://cashu.space">Cashu protocol</a> and
-                the <a href="https://github.com/cashubtc">Cashu specification</a>.
+                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. This means that anyone can run a Cashu mint and anyone can use any Cashu wallet. The protocol is defined in the Cashu <a href="https://cashubtc.github.io/nuts">specifications</a>.
               </p>
+
             </div>
             <div className="basis-6/12 flex justify-center p-6">
               <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
-                <h4 className="font-semibold text-signal-text-strong mb-3">Implementation Details</h4>
-                <p className="text-sm text-signal-text mb-3">
-                  Key data structures and serialization formats:
+                <h4 className="font-semibold text-signal-text-strong mb-3">Protocol Specifications</h4>
+                <p className="text-sm text-signal-text mb-4">
+                  The Cashu protocol is defined by a set of specifications called NUTs (Notation, Usage, and Terminology):
                 </p>
-                <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded border">
-                  <div><strong>Token Format (V4):</strong></div>
-                  <div className="text-xs">
-                    <code className="bg-gray-100 px-1 rounded">cashuB[base64_cbor]</code>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-semibold text-signal-text-strong mb-2 text-green-600">Mandatory</h5>
+                    <ul className="text-sm text-signal-text space-y-1 ml-4">
+                      <li>• <a href="https://cashubtc.github.io/nuts/00/" className="text-blue-600 hover:underline font-medium">NUT-00: Cryptography</a> - Cryptographic primitives</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/03/" className="text-blue-600 hover:underline font-medium">NUT-03: Swapping Tokens</a> - Double spend protection</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/04/" className="text-blue-600 hover:underline font-medium">NUT-04: Minting</a> - Token issuance</li>
+                    </ul>
                   </div>
-                  <div className="mt-3"><strong>Core Data Structures:</strong></div>
-                  <div>• <code className="bg-gray-100 px-1 rounded">Proof</code>: amount, secret, signature</div>
-                  <div>• <code className="bg-gray-100 px-1 rounded">BlindedMessage</code>: amount, id, B_</div>
-                  <div>• <code className="bg-gray-100 px-1 rounded">BlindSignature</code>: amount, id, C_</div>
-                  <div className="mt-3"><strong>Serialization:</strong></div>
-                  <div>• CBOR binary format for efficiency</div>
-                  <div>• Base64 URL-safe encoding</div>
-                  <div>• Single mint per token (V4)</div>
+                  
+                  <div>
+                    <h5 className="font-semibold text-signal-text-strong mb-2 text-orange-600">Optional</h5>
+                    <ul className="text-sm text-signal-text space-y-1 ml-4">
+                      <li>• <a href="https://cashubtc.github.io/nuts/11/" className="text-blue-600 hover:underline font-medium">NUT-11: Pay to Public Key</a> - Programmable payments</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/12/" className="text-blue-600 hover:underline font-medium">NUT-12: DLEQ Proofs</a> - Discrete Log Equality proofs</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/16/" className="text-blue-600 hover:underline font-medium">NUT-16: Animated QR Codes</a> - Dynamic QR codes</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/22/" className="text-blue-600 hover:underline font-medium">NUT-22: Blind Authentication</a> - Privacy-preserving authentication</li>
+                    </ul>
+                  </div>
                 </div>
-                <p className="text-xs text-signal-text-weak mt-3">
-                  V4 tokens use space-efficient CBOR encoding with single-character field names. 
-                  Full specifications available in <a href="https://cashubtc.github.io/nuts/00/" className="text-blue-600 hover:underline">NUT-00</a>.
+                
+                <p className="text-xs text-signal-text-weak mt-4">
+                  Complete specifications and implementation details available in the <a href="https://github.com/cashubtc/nuts" className="text-blue-600 hover:underline">Cashu NUTs repository</a>.
                 </p>
               </div>
             </div>
