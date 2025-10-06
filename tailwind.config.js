@@ -22,7 +22,7 @@ module.exports = {
       "signal-dark": "hsl(221, 14%, 21%)", // Dark elements
       "signal-light": "hsl(221, 14%, 96%)", // Light elements
       white: "#ffffff",
-      black: "hsl(221, 14%, 4%)",
+      black: "#1b1b1b",
       gray: colors.gray,
       // Keep original colors for backward compatibility
       "bpr-purple": "#D264B6",
@@ -34,8 +34,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        body: ["Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        sans: ["Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
         code: ["Inconsolata", "Hack", "SF Mono", "Roboto Mono", "Source Code Pro", "Ubuntu Mono", "monospace"],
       },
       fontSize: {
