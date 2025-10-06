@@ -515,17 +515,22 @@ export default function Home() {
             Follow updates, contribute code, and join the conversation.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://github.com/cashubtc">
+            <a href="https://github.com/cashubtc" target="_blank" rel="noopener noreferrer">
               <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
                 GitHub
               </div>
             </a>
-            <a href="https://t.me/CashuBTC">
+            <a href="https://x.com/CashuBTC" target="_blank" rel="noopener noreferrer">
+              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
+                X (Twitter)
+              </div>
+            </a>
+            <a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer">
               <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
                 Telegram
               </div>
             </a>
-            <a href="https://matrix.to/#/#dev:matrix.cashu.space">
+            <a href="https://matrix.to/#/#dev:matrix.cashu.space" target="_blank" rel="noopener noreferrer">
               <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
                 Matrix
               </div>
