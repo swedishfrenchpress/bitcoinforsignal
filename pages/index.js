@@ -390,7 +390,7 @@ export default function Home() {
                 "Signal protects your messages. Bitcoin protects your money.\n\n" +
                 "Time to bring them together with Cashu ecash.\n\n" +
                 "See the proof-of-concept: bitcoinforsignal.org\n\n" +
-                "🔒₿ #BitcoinForSignal"
+                "@Signalapp 🔒₿ #BitcoinForSignal"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -466,46 +466,22 @@ export default function Home() {
           <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
             <div className="basis-6/12 space-y-6">
               <div>
-                <h3>Isn't Cashu custodial?</h3>
+                <h3>What is Cashu?</h3>
                 <p>
-                  Yes, Cashu mints hold the underlying bitcoin. However, the privacy guarantees are strong:
-                  the mint cannot see who owns which tokens due to blind signatures. For small, everyday payments
-                  (like you'd make in a messenger), this tradeoff is reasonable &mdash; similar to keeping cash in
-                  your physical wallet vs. a bank vault.
+                  Cashu is a purely open-source ecash protocol that enables private, peer-to-peer bitcoin payments using
+                  Chaumian blind signatures. It's not a company, organization, or entity with financial interests &mdash;
+                  it's a free and open-source community-driven project with no single controlling entity. Cashu allows users to send bitcoin payments with the same level of privacy as physical cash, while maintaining compatibility with the broader Bitcoin ecosystem.
                 </p>
               </div>
 
               <div>
-                <h3>What about regulatory concerns?</h3>
+                <h3>How is this Cashu different from MobileCoin?</h3>
                 <p>
-                  Signal is a nonprofit focused on privacy and open-source technology. Cashu ecash is fundamentally
-                  a tool for privacy, not for money transmission at the Signal level. Users hold their own tokens
-                  and interact with mints directly. Signal would simply provide the interface, similar to how they
-                  provide encrypted messaging without reading messages.
-                </p>
-              </div>
-
-              <div>
-                <h3>Why not use Lightning directly?</h3>
-                <p>
-                  Lightning provides fast bitcoin payments, but it has privacy limitations: payment routing can leak
-                  metadata about senders and receivers. Cashu ecash provides superior privacy through blind signatures,
-                  making it a better fit for Signal's privacy mission. That said, Cashu is built on top of Lightning,
-                  so this integration benefits from Lightning's infrastructure.
+                  Cashu is a purely open-source project with no financial backers or commercial interests. Bitcoin is the world's most liquid and widely-adopted cryptocurrency with deep infrastructure and network effects. Cashu brings strong privacy to bitcoin, making it a pragmatic alternative that Signal users are more likely to actually use.
                 </p>
               </div>
             </div>
             <div className="basis-6/12 space-y-6">
-              <div>
-                <h3>How is this different from MobileCoin?</h3>
-                <p>
-                  MobileCoin is a separate blockchain with its own cryptocurrency. Bitcoin is the world's most
-                  liquid and widely-adopted cryptocurrency with deep infrastructure and network effects. Cashu
-                  brings strong privacy to bitcoin, making it a pragmatic alternative that Signal users are
-                  more likely to actually use.
-                </p>
-              </div>
-
               <div>
                 <h3>Will Signal actually do this?</h3>
                 <p>
