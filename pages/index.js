@@ -157,7 +157,7 @@ export default function Home() {
             </div>
 
             <div className="basis-6/12 pt-6 md:p-6 flex justify-center">
-              <img src="/signal-hidden.jpg" alt="Signal needs private bitcoin" className="xl:w-8/12" />
+              <img src="/signal-problem.jpg" alt="Signal needs private bitcoin" className="xl:w-8/12" />
             </div>
           </section>
 
