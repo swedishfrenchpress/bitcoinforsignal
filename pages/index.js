@@ -119,7 +119,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="bg-white border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
+                  <div className="bg-white px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
                     Share This Campaign On X
                   </div>
                 </a>
@@ -350,6 +350,21 @@ export default function Home() {
             Now we need to show Signal that there's demand for this integration.
           </p>
 
+          {/* Share Campaign Button */}
+          <div className="flex justify-center pt-6">
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                "Private messaging needs private money. @Signalapp should integrate Bitcoin payments using Cashu ecash for maximum privacy. Check out this proof-of-concept: https://bitcoinforsignal.org #BitcoinForSignal #Signal #Cashu"
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="bg-signal-blue px-8 py-4 text-lg text-white hover:bg-blue-700 transition rounded-md font-medium inline-block">
+                Share This Campaign On X
+              </div>
+            </a>
+          </div>
+
           <div className="max-w-screen-lg pt-8 space-y-6">
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Signal Users</h3>
@@ -383,7 +398,6 @@ export default function Home() {
               </ul>
             </div>
           </div>
-
 
           <div className="pt-8 text-center space-y-6">
             <h3 className="text-2xl">Resources</h3>
