@@ -387,22 +387,17 @@ export default function Home() {
             <ul className="space-y-2">
               <li>
                 <a href="https://cashu.space">
-                  Cashu Protocol Documentation
+                  Cashu Official Website
                 </a>
               </li>
               <li>
                 <a href="https://github.com/cashubtc">
-                  Cashu GitHub Organization
+                  Cashu Documentation
                 </a>
               </li>
               <li>
                 <a href="#">
                   Signal + Cashu Fork Repository (coming soon)
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Open Letter to Signal (coming soon)
                 </a>
               </li>
             </ul>
@@ -492,9 +487,9 @@ export default function Home() {
                 Telegram
               </div>
             </a>
-            <a href="https://discord.gg/qKadAAQH">
+            <a href="https://matrix.to/#/#dev:matrix.cashu.space">
               <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
-                Discord
+                Matrix
               </div>
             </a>
           </div>
