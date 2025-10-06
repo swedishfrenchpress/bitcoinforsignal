@@ -442,7 +442,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mx-auto px-12 max-w-screen-xl">
+        <div className="container mx-auto px-12 max-w-screen-xl pb-24">
           <h2 className="text-signal-blue mb-4" id="faq">FAQ</h2>
           <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
             <div className="basis-6/12 space-y-6">
@@ -484,13 +484,6 @@ export default function Home() {
           </div>
         </div>
           
-        <div className="pt-24 pb-24 pl-12 pr-12 max-w-4xl text-center space-y-4 flex flex-col items-center container mx-auto max-w-screen-lg">
-          <h2 className="text-signal-blue">Join the Movement</h2>
-          <p className="text-xl">
-            This is a grassroots advocacy campaign to bring private bitcoin payments to Signal.
-            Follow updates, contribute code, and join the conversation.
-          </p>
-        </div>
       </main>
 
       {/* Footer */}
