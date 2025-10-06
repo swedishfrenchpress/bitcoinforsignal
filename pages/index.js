@@ -119,7 +119,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
+                  <div className="bg-white border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
                     Share This Campaign On X
                   </div>
                 </a>
@@ -136,12 +136,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fade-in-up animation-delay-600">
-            <svg width="78" height="126" viewBox="0 0 78 126" fill="none" xmlns="http://www.w3.org/2000/svg" className="hero-scroll min-w-[96px] min-h-[126px]">
-              <path d="M42 14C42 12.3431 40.6569 11 39 11C37.3431 11 36 12.3431 36 14H42ZM36.8787 101.121C38.0503 102.293 39.9497 102.293 41.1213 101.121L60.2132 82.0294C61.3848 80.8579 61.3848 78.9584 60.2132 77.7868C59.0416 76.6152 57.1421 76.6152 55.9706 77.7868L39 94.7574L22.0294 77.7868C20.8579 76.6152 18.9584 76.6152 17.7868 77.7868C16.6152 78.9584 16.6152 80.8579 17.7868 82.0294L36.8787 101.121ZM36 14V99H42V14H36Z" fill="#1b1b1b"/>
-            </svg>
-          </div>
         </div>
 
         <div className="container mx-auto px-12 max-w-screen-xl">
@@ -394,7 +388,7 @@ export default function Home() {
 
           <div className="pt-8 text-center space-y-6">
             <h3 className="text-2xl">Resources</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
               {/* Cashu Website */}
               <a 
                 href="https://cashu.space" 
@@ -431,23 +425,6 @@ export default function Home() {
                 </div>
               </a>
 
-              {/* Matrix Chat */}
-              <a 
-                href="https://matrix.to/#/#cashu:bitcoin.kyoto" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 flex flex-col items-center space-y-3 group"
-              >
-                <div className="w-8 h-8 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-600 group-hover:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-gray-900 group-hover:text-gray-700">Matrix Chat</div>
-                  <div className="text-sm text-gray-500">Join the conversation</div>
-                </div>
-              </a>
             </div>
           </div>
         </div>
