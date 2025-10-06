@@ -92,14 +92,10 @@ strong {
 
 .hero {
   position: relative;
-  background: 
-    radial-gradient(ellipse at 20% 50%, rgba(58, 118, 240, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(58, 118, 240, 0.2) 0%, transparent 50%),
-    linear-gradient(135deg, #3A76F0 0%, #2B5CE6 100%);
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
   overflow: hidden;
 
-  // Elegant subtle grid overlay
+  // Elegant Signal blue grid overlay
   &::before {
     content: '';
     position: absolute;
@@ -110,15 +106,15 @@ strong {
     background-image:
       repeating-linear-gradient(
         0deg,
-        rgba(255, 255, 255, 0.03) 0px,
-        rgba(255, 255, 255, 0.03) 1px,
+        rgba(58, 118, 240, 0.08) 0px,
+        rgba(58, 118, 240, 0.08) 1px,
         transparent 1px,
         transparent 60px
       ),
       repeating-linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.03) 0px,
-        rgba(255, 255, 255, 0.03) 1px,
+        rgba(58, 118, 240, 0.08) 0px,
+        rgba(58, 118, 240, 0.08) 1px,
         transparent 1px,
         transparent 60px
       );
@@ -128,7 +124,7 @@ strong {
     animation: mesh-subtle-rotate 30s ease-in-out infinite;
   }
 
-  // Sophisticated overlay with subtle noise
+  // Subtle gradient overlay for depth
   &::after {
     content: '';
     position: absolute;
@@ -139,17 +135,17 @@ strong {
     background: 
       radial-gradient(
         ellipse at 50% 0%,
-        rgba(255, 255, 255, 0.1) 0%,
-        transparent 70%
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 60%
       ),
       radial-gradient(
         ellipse at 0% 100%,
-        rgba(58, 118, 240, 0.15) 0%,
+        rgba(58, 118, 240, 0.05) 0%,
         transparent 50%
       ),
       radial-gradient(
         ellipse at 100% 100%,
-        rgba(255, 255, 255, 0.05) 0%,
+        rgba(58, 118, 240, 0.03) 0%,
         transparent 50%
       );
     pointer-events: none;
@@ -165,6 +161,15 @@ strong {
   h1, h3, p, svg {
     text-shadow: none !important;
     filter: none !important;
+  }
+
+  // Elegant Signal blue gradient for main headline
+  h1 {
+    background: linear-gradient(135deg, #3A76F0 0%, #2B5CE6 50%, #1E40AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 }
 
