@@ -169,7 +169,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-signal-primary" id="solution">The Solution</h2>
+              <h2 className="text-signal-blue" id="solution">The Solution</h2>
 
               <h3>Cashu Ecash + Signal = Private Bitcoin Payments</h3>
 
@@ -314,7 +314,7 @@ export default function Home() {
                 
                 <div className="space-y-4">
                   <div>
-                    <h5 className="font-semibold text-signal-text-strong mb-2 text-green-600">Mandatory</h5>
+                    <h5 className="font-semibold text-signal-text-strong mb-2 text-signal-blue">Mandatory</h5>
                     <ul className="text-sm text-signal-text space-y-1 ml-4">
                       <li>• <a href="https://cashubtc.github.io/nuts/00/" className="text-blue-600 hover:underline font-medium">NUT-00: Cryptography</a> - Cryptographic primitives</li>
                       <li>• <a href="https://cashubtc.github.io/nuts/03/" className="text-blue-600 hover:underline font-medium">NUT-03: Swapping Tokens</a> - Double spend protection</li>
@@ -339,18 +339,10 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          <div className="flex justify-center mb-8">
-            <img 
-              src="/ecash-how-flowchart.png" 
-              alt="Flowchart showing how Cashu tokens flow between Signal users" 
-              className="w-full max-w-4xl h-auto"
-            />
-          </div>
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
-          <h2 className="text-signal-primary" id="action">Take Action</h2>
+          <h2 className="text-signal-blue" id="action">Take Action</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
             This proof-of-concept demonstrates that Cashu + Signal is technically feasible.
