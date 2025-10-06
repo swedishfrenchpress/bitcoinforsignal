@@ -476,33 +476,54 @@ export default function Home() {
             This is a grassroots advocacy campaign to bring private bitcoin payments to Signal.
             Follow updates, contribute code, and join the conversation.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://github.com/cashubtc" target="_blank" rel="noopener noreferrer">
-              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
-                GitHub
-              </div>
-            </a>
-            <a href="https://x.com/CashuBTC" target="_blank" rel="noopener noreferrer">
-              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
-                X (Twitter)
-              </div>
-            </a>
-            <a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer">
-              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
-                Telegram
-              </div>
-            </a>
-            <a href="https://matrix.to/#/#dev:matrix.cashu.space" target="_blank" rel="noopener noreferrer">
-              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
-                Matrix
-              </div>
-            </a>
-          </div>
-          <p className="text-sm text-signal-text-light pt-8">
-            Built with ❤️ by the Bitcoin privacy community • Proof-of-concept from Bitcoin++ Berlin
-          </p>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-[#3C3744] text-[#E9E9E9] py-12 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            {/* Left Section - Copyright and Info */}
+            <div className="lg:col-span-2 space-y-4">
+              <p className="text-sm text-[#E9E9E9]">
+                © 2025 Bitcoin for Signal. This is a grassroots advocacy campaign, not an official Signal or Cashu project.
+              </p>
+              <p className="text-sm text-[#E9E9E9]">
+                "Signal", Signal logos, and other trademarks are trademarks or registered trademarks of Signal Technology Foundation.
+              </p>
+              <p className="text-sm text-[#E9E9E9]">
+                For media inquiries about this campaign, contact us at <a href="mailto:bitcoinforsignal@proton.me" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>bitcoinforsignal@proton.me</a>.
+              </p>
+            </div>
+
+            {/* Download Signal Column */}
+            <div className="space-y-3">
+              <h4 className="block font-semibold text-[#E9E9E9] mb-3" style={{fontWeight: 600, marginBottom: '12px', fontSize: '16px'}}>Download Signal</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="https://signal.org/android" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Android</a></li>
+                <li><a href="https://signal.org/iphone" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>iPhone & iPad</a></li>
+                <li><a href="https://signal.org/desktop" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Windows</a></li>
+                <li><a href="https://signal.org/desktop" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Mac</a></li>
+                <li><a href="https://signal.org/desktop" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Linux</a></li>
+              </ul>
+            </div>
+
+            {/* Cashu Resources Column */}
+            <div className="space-y-3">
+              <h4 className="block font-semibold text-[#E9E9E9] mb-3" style={{fontWeight: 600, marginBottom: '12px', fontSize: '16px'}}>Resources</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="https://cashu.space" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Official Website</a></li>
+                <li><a href="https://github.com/cashubtc" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu GitHub</a></li>
+                <li><a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Documentation</a></li>
+                <li><a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Telegram</a></li>
+                <li><a href="https://x.com/CashuBTC" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu on X</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
