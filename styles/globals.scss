@@ -93,10 +93,10 @@ strong {
 .hero {
   position: relative;
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(58, 118, 240, 0.3) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
-    linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    radial-gradient(ellipse at 40% 80%, rgba(58, 118, 240, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #3A76F0 0%, #2B5CE6 100%);
   overflow: hidden;
 
   // Elegant subtle grid overlay
@@ -144,7 +144,7 @@ strong {
       ),
       radial-gradient(
         ellipse at 0% 100%,
-        rgba(120, 119, 198, 0.15) 0%,
+        rgba(58, 118, 240, 0.15) 0%,
         transparent 50%
       ),
       radial-gradient(

@@ -204,9 +204,8 @@ export default function Home() {
                 <video 
                   className="w-full max-w-4xl aspect-video rounded-md shadow-sm" 
                   controls
-                  poster="/ecash-how-flowchart.png"
                 >
-                  <source src="/bump-cash-wide.mp4" type="video/mp4" />
+                  <source src="/signal-demo.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 <p className="text-center text-signal-text max-w-4xl">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
