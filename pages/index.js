@@ -5,6 +5,7 @@ import {
 } from "@bitcoin-design/bitcoin-icons-react/filled";
 import { BitcoinCircleIcon as BitcoinCircleIconOutline } from "@bitcoin-design/bitcoin-icons-react/outline";
 import React from "react";
+import { TextScramble } from '../components/core/text-scramble';
 
 function toggleMenu() {
   let header = document.getElementById('header-container');
@@ -88,16 +89,21 @@ export default function Home() {
 
       <main className="text-left">
         <div className="hero text-center text-white flex items-center justify-center flex-col w-full p-12 pt-24 min-h-screen lg:p-36 relative overflow-hidden">
+
           {/* Content overlay */}
           <div className="content-overlay relative z-30 flex flex-col items-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-12 animate-fade-in-up">
-              Bitcoin Belongs in Signal
+              <TextScramble speed={25} delay={200}>
+                Bitcoin Belongs in Signal
+              </TextScramble>
             </h1>
 
             <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-12 max-w-5xl animate-fade-in-up animation-delay-200">
-              Private messaging meets private money.
-              Cashu ecash enables truly private bitcoin payments
-              inside the world's most trusted encrypted messenger.
+              <TextScramble speed={30} delay={600}>
+                Private messaging meets private money.
+                Cashu ecash enables truly private bitcoin payments
+                inside the world's most trusted encrypted messenger.
+              </TextScramble>
             </h3>
 
             {/* Phone Composition - Below the subtitle */}
