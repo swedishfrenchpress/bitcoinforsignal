@@ -39,21 +39,21 @@ export default function Home() {
   return (
     <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
-        <title>Cashu for Signal - Private Bitcoin Payments</title>
+        <title>Bitcoin for Signal - Private Bitcoin Payments</title>
         <meta
           name="description"
           content="Signal should integrate Cashu ecash for private, peer-to-peer bitcoin payments. Built at Bitcoin++ Lightning Hackathon in Berlin."
         />
-        <meta property="og:image" content="/signal-cashu-poster.jpg" />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
-        <meta property="og:image:alt" content="Cashu for Signal - Private Bitcoin Payments" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bitcoin for Signal - Private Bitcoin Payments" />
+        <meta property="og:description" content="Signal should integrate Cashu ecash for private, peer-to-peer bitcoin payments. Built at Bitcoin++ Lightning Hackathon in Berlin." />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:image:alt" content="Bitcoin for Signal - Private Bitcoin Payments" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@bitcoin_design" />
-        <meta name="twitter:creator" content="@bitcoin_design" />
-        <meta name="twitter:title" content="Cashu for Signal - Private Bitcoin Payments" />
+        <meta name="twitter:title" content="Bitcoin for Signal - Private Bitcoin Payments" />
         <meta name="twitter:description" content="Signal should integrate Cashu ecash for private, peer-to-peer bitcoin payments. Built at Bitcoin++ Lightning Hackathon in Berlin." />
-        <meta name="twitter:image" content="/signal-cashu-poster.jpg" />
+        <meta name="twitter:image" content="/og-image.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -386,6 +386,24 @@ export default function Home() {
                 <li>Position Signal as the premier private communication and payment platform</li>
               </ul>
             </div>
+          </div>
+
+          {/* Share on X (Twitter) button */}
+          <div className="pt-4 flex justify-center">
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                "Signal protects your messages. Bitcoin protects your money.\n\n" +
+                "Time to bring them together with Cashu ecash.\n\n" +
+                "See the proof-of-concept: bitcoinforsignal.org\n\n" +
+                "🔒₿ #BitcoinForSignal"
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="border-2 border-signal-blue px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium">
+                Share This Campaign On X
+              </div>
+            </a>
           </div>
 
           <div className="pt-8 text-center space-y-6">
