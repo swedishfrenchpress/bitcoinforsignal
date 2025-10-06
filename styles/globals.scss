@@ -299,30 +299,49 @@ section {
 }
 
 #header-container {
-  &.transparent.deactivated {
-    @media (min-width: 1024px) {
-      background-color: transparent;
-    }
-
+  // Always white background on desktop, keep mobile functionality
+  @media (min-width: 1024px) {
+    background-color: white;
+    
     a {
-      @apply text-white drop-shadow-md;
+      @apply text-black;
     }
 
     header, .controls, #nav {
-      background-color: transparent;
-
-      @media (min-width: 1024px) {
-        background-color: transparent;
-      }
+      background-color: white;
     }
 
     .logo {
-      @apply text-white;
-      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+      @apply text-black;
+      filter: none;
     }
 
     .menu-toggle {
-      @apply text-white;
+      @apply text-black;
+    }
+  }
+
+  // Keep mobile functionality exactly the same
+  &.transparent.deactivated {
+    @media (max-width: 1023px) {
+      background-color: transparent;
+
+      a {
+        @apply text-white drop-shadow-md;
+      }
+
+      header, .controls, #nav {
+        background-color: transparent;
+      }
+
+      .logo {
+        @apply text-white;
+        filter: none; // Remove shadow on mobile too
+      }
+
+      .menu-toggle {
+        @apply text-white;
+      }
     }
   }
   
