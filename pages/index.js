@@ -39,21 +39,21 @@ export default function Home() {
   return (
     <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
       <Head>
-        <title>Bitcoin for Signal - Private Bitcoin Payments</title>
+        <title>Bitcoin for Signal - Private Messaging Needs Private Money.</title>
         <meta
           name="description"
-          content="Signal should integrate Cashu ecash for private, peer-to-peer bitcoin payments. Built at Bitcoin++ Lightning Hackathon in Berlin."
+          content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash."
         />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bitcoin for Signal - Private Bitcoin Payments" />
-        <meta property="og:description" content="Signal should integrate Cashu ecash for private, peer-to-peer bitcoin payments. Built at Bitcoin++ Lightning Hackathon in Berlin." />
-        <meta property="og:image" content="/og-image.jpg" />
-        <meta property="og:image:alt" content="Bitcoin for Signal - Private Bitcoin Payments" />
+        <meta property="og:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
+        <meta property="og:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
+        <meta property="og:image" content="/og-image2.jpg" />
+        <meta property="og:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bitcoin for Signal - Private Bitcoin Payments" />
-        <meta name="twitter:description" content="Signal should integrate Cashu ecash for private, peer-to-peer bitcoin payments. Built at Bitcoin++ Lightning Hackathon in Berlin." />
-        <meta name="twitter:image" content="/og-image.jpg" />
+        <meta name="twitter:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
+        <meta name="twitter:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
+        <meta name="twitter:image" content="/og-image2.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -95,13 +95,13 @@ export default function Home() {
             <div className="flex-1 text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up">
                 <TextScramble speed={25} delay={200}>
-                  Bitcoin Belongs in Signal
+                Private Messaging Needs Private Money.
                 </TextScramble>
               </h1>
 
               <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200">
                 <TextScramble speed={30} delay={600}>
-                  Private messaging meets private money.
+                  Bitcoin belongs in Signal.
                   Cashu ecash enables truly private bitcoin payments
                   inside the world's most trusted encrypted messenger.
                 </TextScramble>
@@ -114,7 +114,7 @@ export default function Home() {
                     "Signal protects your messages. Bitcoin protects your money.\n\n" +
                     "Time to bring them together with Cashu ecash.\n\n" +
                     "See the proof-of-concept: bitcoinforsignal.org\n\n" +
-                    "@Signalapp 🔒₿ #BitcoinForSignal"
+                    "@Signalapp #BitcoinForSignal 🔒₿"
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -176,8 +176,7 @@ export default function Home() {
               <h3>Cashu Ecash + Signal = Private Bitcoin Payments</h3>
 
               <p>
-                At the Bitcoin++ Lightning Hackathon in Berlin, two developers built a working fork of Signal
-                that natively integrates <a href="https://cashu.space">Cashu ecash</a>.
+                Developers have built a working fork of Signal that natively integrates <a href="https://cashu.space">Cashu ecash</a>.
                 This proof-of-concept demonstrates that private bitcoin payments can work seamlessly inside Signal.
               </p>
 
@@ -202,8 +201,8 @@ export default function Home() {
             <h2 className="text-signal-blue" id="demo">See It In Action</h2>
 
             <p className="max-w-4xl mx-auto">
-              The Signal + Cashu fork was built during the Bitcoin++ Lightning Hackathon in Berlin.
-              Below are placeholders for demo videos and screenshots showcasing the integration.
+              The Signal + Cashu fork demonstrates how private bitcoin payments can work seamlessly inside Signal.
+              Below are demo videos and screenshots showcasing the integration.
             </p>
 
             <div className="flex flex-col space-y-8 pb-12">
@@ -364,7 +363,7 @@ export default function Home() {
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Developers</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Review the Signal + Cashu proof-of-concept code (repository link to come)</li>
+                <li>Review the Signal + Cashu proof-of-concept code</li>
                 <li>Help refine the UX and security model</li>
                 <li>Build complementary tools (mint infrastructure, testing tools, etc.)</li>
                 <li>Learn about <a href="https://cashu.space">Cashu</a> and contribute to the broader ecosystem</li>

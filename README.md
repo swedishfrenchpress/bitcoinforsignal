@@ -4,7 +4,7 @@ An advocacy website promoting the integration of Cashu ecash into Signal for pri
 
 ## About
 
-This site advocates for Signal to integrate [Cashu](https://cashu.space) ecash as a replacement for their underutilized MobileCoin integration. During the Bitcoin++ Lightning Hackathon in Berlin, developers built a proof-of-concept Signal fork with native Cashu support, demonstrating the technical feasibility of this integration.
+This site advocates for Signal to integrate [Cashu](https://cashu.space) ecash as a replacement for their underutilized MobileCoin integration. Developers have built a proof-of-concept Signal fork with native Cashu support, demonstrating the technical feasibility of this integration.
 
 ## Why Cashu + Signal?
 
@@ -18,7 +18,7 @@ This site advocates for Signal to integrate [Cashu](https://cashu.space) ecash a
 We believe private messaging deserves private money. This site serves as:
 
 1. An educational resource about Cashu ecash and its privacy benefits
-2. A demonstration that the integration is technically viable (via the hackathon proof-of-concept)
+2. A demonstration that the integration is technically viable (via the proof-of-concept)
 3. A rallying point for users, developers, and privacy advocates to show Signal there's demand
 
 ## Contributing
@@ -58,4 +58,4 @@ Then deploy the `out` directory.
 
 ---
 
-**Note**: This is a grassroots advocacy campaign, not an official Signal or Cashu project. The proof-of-concept was built at Bitcoin++ Berlin to demonstrate technical feasibility.
+**Note**: This is a grassroots advocacy campaign, not an official Signal or Cashu project. The proof-of-concept was built to demonstrate technical feasibility.

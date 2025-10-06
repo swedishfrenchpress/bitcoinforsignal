@@ -86,6 +86,20 @@ strong {
     color: #1b1b1b !important;
   }
 
+  // Hero H1 specific styling
+  h1 {
+    font-size: 60px !important;
+    font-weight: 800 !important;
+    line-height: 64px !important;
+  }
+
+  // Hero subtitle specific styling
+  h3 {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 28px !important;
+  }
+
   // Override any Tailwind font classes
   .font-extrabold,
   .font-bold,
