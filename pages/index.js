@@ -91,43 +91,56 @@ export default function Home() {
         <div className="hero flex items-center justify-center w-full p-12 pt-24 min-h-screen lg:p-36 relative overflow-hidden">
           <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             
-            {/* Left side - Text content */}
-            <div className="flex-1 text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up">
+            {/* Text content wrapper - we'll reorder children on mobile */}
+            <div className="flex-1 text-left flex flex-col">
+              {/* Title - appears first on both mobile and desktop */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up order-1">
                 <TextScramble speed={25} delay={200}>
                 Private Messaging Needs Private Money.
                 </TextScramble>
               </h1>
 
-              <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200">
-                <TextScramble speed={30} delay={600}>
-                  Bitcoin belongs in Signal.
-                  Cashu ecash enables truly private bitcoin payments
-                  inside the world's most trusted encrypted messenger.
-                </TextScramble>
-              </h3>
+              {/* Image - appears second on mobile (order-2), but moves to right side on desktop (lg:order-3) */}
+              <div className="flex-1 flex justify-center mb-8 lg:hidden animate-fade-in-up animation-delay-400 order-2">
+                <img 
+                  src="/signal-hero2.png" 
+                  alt="Signal app interface"
+                  className="w-full max-w-md"
+                />
+              </div>
 
-              {/* Share button */}
-              <div className="animate-fade-in-up animation-delay-400">
-                <a 
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                    "Signal protects your messages. Bitcoin protects your money.\n\n" +
-                    "Time to bring them together with Cashu ecash.\n\n" +
-                    "See the proof-of-concept: bitcoinforsignal.org\n\n" +
-                    "@Signalapp #BitcoinForSignal 🔒₿"
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="bg-white px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
-                    Share This Campaign On X
-                  </div>
-                </a>
+              {/* Subtitle and button - appears third on mobile (order-3), second on desktop (lg:order-2) */}
+              <div className="order-3 lg:order-2">
+                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200">
+                  <TextScramble speed={30} delay={600}>
+                    Bitcoin belongs in Signal.
+                    Cashu ecash enables truly private bitcoin payments
+                    inside the world's most trusted encrypted messenger.
+                  </TextScramble>
+                </h3>
+
+                {/* Share button */}
+                <div className="animate-fade-in-up animation-delay-400">
+                  <a 
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                      "Signal protects your messages. Bitcoin protects your money.\n\n" +
+                      "Time to bring them together with Cashu ecash.\n\n" +
+                      "See the proof-of-concept: bitcoinforsignal.org\n\n" +
+                      "@Signalapp #BitcoinForSignal 🔒₿"
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="bg-white px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
+                      Share This Campaign On X
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Right side - Image */}
-            <div className="flex-1 flex justify-center lg:justify-end animate-fade-in-up animation-delay-400">
+            {/* Right side - Image (desktop only) */}
+            <div className="hidden lg:flex flex-1 justify-center lg:justify-end animate-fade-in-up animation-delay-400">
               <img 
                 src="/signal-hero2.png" 
                 alt="Signal app interface"
