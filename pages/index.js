@@ -94,7 +94,7 @@ export default function Home() {
             {/* Text content wrapper - we'll reorder children on mobile */}
             <div className="flex-1 text-left flex flex-col">
               {/* Title - appears first on both mobile and desktop */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up order-1">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up order-1" style={{ minHeight: '8rem' }}>
                 <TextScramble speed={25} delay={200}>
                 Private Messaging Needs Private Money.
                 </TextScramble>
@@ -111,7 +111,7 @@ export default function Home() {
 
               {/* Subtitle and button - appears third on mobile (order-3), second on desktop (lg:order-2) */}
               <div className="order-3 lg:order-2">
-                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200">
+                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
                     Bitcoin belongs in Signal.
                     Cashu ecash enables truly private bitcoin payments

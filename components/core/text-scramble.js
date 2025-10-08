@@ -62,7 +62,16 @@ export function TextScramble({ children, className = '', speed = 30, delay = 0 }
   }, [originalText, speed, delay]);
 
   return (
-    <span className={`${className} font-mono`} style={{ fontVariantNumeric: 'tabular-nums' }}>
+    <span 
+      className={`${className} inline-block`} 
+      style={{ 
+        fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+        fontVariantNumeric: 'tabular-nums',
+        letterSpacing: '0.02em',
+        whiteSpace: 'pre-wrap',
+        minHeight: '1em'
+      }}
+    >
       {displayText}
     </span>
   );
