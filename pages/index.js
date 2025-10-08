@@ -139,9 +139,14 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-12 max-w-screen-xl">
-          <section>
-            <div className="basis-6/12 space-y-4 flex justify-center flex-col">
+          <section className="flex flex-col md:flex-row md:gap-4 md:pt-12 md:pb-12">
+            <div className="w-full md:basis-6/12 space-y-4 flex justify-center flex-col">
               <h2 className="text-signal-blue" id="problem">The Problem</h2>
+              
+              {/* Image appears right after title on mobile only */}
+              <div className="md:hidden mb-6 flex justify-center">
+                <img src="/signal-problem.jpg" alt="Signal needs private bitcoin" className="w-full max-w-sm object-contain" />
+              </div>
 
               <h3>
                 Signal integrated MobileCoin, but it hasn't seen meaningful adoption. Bitcoin is the obvious alternative.
@@ -164,14 +169,20 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="basis-6/12 pt-6 md:p-6 flex justify-center">
-              <img src="/signal-problem.jpg" alt="Signal needs private bitcoin" className="xl:w-8/12" />
+            {/* Image appears beside content on desktop with proper spacing */}
+            <div className="hidden md:flex md:basis-6/12 pt-6 md:p-6 justify-center">
+              <img src="/signal-problem.jpg" alt="Signal needs private bitcoin" className="xl:w-8/12 object-contain" />
             </div>
           </section>
 
-          <section>
-            <div className="basis-6/12 space-y-4 flex justify-center flex-col">
+          <section className="flex flex-col md:flex-row md:gap-4 md:pt-12 md:pb-12">
+            <div className="w-full md:basis-6/12 space-y-4 flex justify-center flex-col">
               <h2 className="text-signal-blue" id="solution">The Solution</h2>
+              
+              {/* Image appears right after title on mobile only */}
+              <div className="md:hidden mb-6 flex justify-center">
+                <img src="/signal-hidden.jpg" alt="Cashu + Signal integration" className="w-full max-w-sm object-contain" />
+              </div>
 
               <h3>Cashu Ecash + Signal = Private Bitcoin Payments</h3>
 
@@ -187,8 +198,9 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="basis-6/12 pt-6 md:p-6 flex justify-center items-center">
-              <img src="/signal-hidden.jpg" alt="Cashu + Signal integration" className="xl:w-8/12" />
+            {/* Image appears beside content on desktop with proper spacing */}
+            <div className="hidden md:flex md:basis-6/12 pt-6 md:p-6 justify-center">
+              <img src="/signal-hidden.jpg" alt="Cashu + Signal integration" className="xl:w-8/12 object-contain" />
             </div>
           </section>
 
