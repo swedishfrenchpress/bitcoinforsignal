@@ -185,11 +185,6 @@ export default function Home() {
                 blind signatures &mdash; not even the mint knows who owns which tokens. Users can send bitcoin to
                 each other with the same privacy guarantees as their encrypted messages.
               </p>
-
-              <p>
-                This integration feels native to Signal. No clunky external wallets, no blockchain addresses
-                cluttering your chats &mdash; just tap, send, done. Privacy-preserving. Instant. Bitcoin.
-              </p>
             </div>
 
             <div className="basis-6/12 pt-6 md:p-6 flex justify-center items-center">
