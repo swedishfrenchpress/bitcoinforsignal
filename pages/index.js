@@ -162,24 +162,15 @@ export default function Home() {
               </div>
 
               <h3>
-                Signal integrated MobileCoin, but it hasn't seen meaningful adoption. Bitcoin is the obvious alternative.
+                Payments Belong in Signal.
               </h3>
 
               <p>
-                Signal built payments into their app using MobileCoin &mdash; a privacy-focused cryptocurrency.
-                But MobileCoin has limited liquidity, minimal adoption, and lacks the network effects that make
-                a payment system useful.
+              Signal enables private communication for everyone. But the moment we leave Signal to make a payment, our interactions become traceable.
               </p>
 
-              <p>
-                Bitcoin is the world's most liquid, most adopted, and most censorship-resistant digital currency.
-                But base-layer bitcoin lacks the privacy guarantees that align with Signal's mission.
-              </p>
+              <p>Signal aimed to solve this problem by integrating MobileCoin. But a currency that has hardly any adoption becomes just another hurdle for our privacy.</p>
 
-              <p>
-                What if Signal could offer bitcoin payments with privacy equal to or better than their messaging?
-                That's exactly what Cashu ecash enables.
-              </p>
             </div>
 
             {/* Image appears beside content on desktop with proper spacing */}
@@ -194,26 +185,23 @@ export default function Home() {
               
               {/* Image appears right after title on mobile only */}
               <div className="md:hidden mb-6 flex justify-center">
-                <img src="/signal-hidden.jpg" alt="Cashu + Signal integration" className="w-full max-w-sm object-contain" />
+                <img src="/signal-hidden.jpg" alt="Cashu x Signal integration" className="w-full max-w-sm object-contain" />
               </div>
 
-              <h3>Cashu Ecash + Signal = Private Bitcoin Payments</h3>
+              <h3>Bitcoin Is the Obvious Answer.</h3>
 
               <p>
-                Developers have built a working fork of Signal that natively integrates <a href="https://cashu.space">Cashu ecash</a>.
-                This proof-of-concept demonstrates that private bitcoin payments can work seamlessly inside Signal.
+              As the most widely adopted cryptocurrency, Bitcoin gives any Signal user plausible deniability. 
               </p>
 
               <p>
-                Cashu is a Chaumian ecash protocol built on Bitcoin and Lightning. It provides true privacy through
-                blind signatures &mdash; not even the mint knows who owns which tokens. Users can send bitcoin to
-                each other with the same privacy guarantees as their encrypted messages.
+              With the Cashu ecash protocol, built around Chaumian blind signatures, Signal users are enabled to anonymously send and receive Bitcoin micropayments natively within the Signal app.
               </p>
             </div>
 
             {/* Image appears beside content on desktop with proper spacing */}
             <div className="hidden md:flex md:basis-6/12 pt-6 md:p-6 justify-center">
-              <img src="/signal-hidden.jpg" alt="Cashu + Signal integration" className="xl:w-8/12 object-contain" />
+              <img src="/signal-hidden.jpg" alt="Cashu x Signal integration" className="xl:w-8/12 object-contain" />
             </div>
           </section>
 
@@ -221,13 +209,11 @@ export default function Home() {
             <h2 className="text-signal-blue" id="demo">See It In Action</h2>
 
             <p className="max-w-4xl mx-auto">
-              The Signal + Cashu fork demonstrates how private bitcoin payments can work seamlessly inside Signal.
-              Below are demo videos and screenshots showcasing the integration.
+              The Signal x Cashu fork demonstrates how private bitcoin payments can work seamlessly inside Signal.
             </p>
 
             <div className="flex flex-col space-y-8 pb-12">
               <div className="flex flex-col items-center space-y-4">
-                <h4 className="font-semibold text-signal-text-strong">Demo Video</h4>
                 <video 
                   className="w-full max-w-4xl aspect-video rounded-md shadow-sm" 
                   controls
@@ -366,7 +352,7 @@ export default function Home() {
           <h2 className="text-signal-blue" id="action">Take Action</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
-            This proof-of-concept demonstrates that Cashu + Signal is technically feasible.
+            This proof-of-concept demonstrates that Cashu x Signal is technically feasible.
             Now we need to show Signal that there's demand for this integration.
           </p>
 
@@ -469,8 +455,7 @@ export default function Home() {
               <div>
                 <h3>What is Cashu?</h3>
                 <p>
-                  Cashu is a purely open-source ecash protocol that enables private, peer-to-peer bitcoin payments using
-                  Chaumian blind signatures. It's not a company, organization, or entity with financial interests &mdash;
+                  Cashu enables private, peer-to-peer bitcoin payments using Chaumian blind signatures. It's not a company, organization, or entity with financial interests &mdash;
                   it's a free and open-source community-driven project with no single controlling entity. Cashu allows users to send bitcoin payments with the same level of privacy as physical cash, while maintaining compatibility with the broader Bitcoin ecosystem.
                 </p>
               </div>
