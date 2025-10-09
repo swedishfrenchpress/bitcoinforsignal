@@ -13,11 +13,29 @@ function toggleMenu() {
   else header.classList.add('deactivated');
 }
 
-function scrollTo(e){
+function scrollToSection(e){
   e.preventDefault();
-  let element = document.getElementById( e.target.hash.substring(1) );
-  element.scrollIntoView({behavior: 'smooth', block: 'center'});
-  toggleMenu();
+  const href = e.currentTarget && e.currentTarget.getAttribute ? (e.currentTarget.getAttribute('href') || '') : '';
+  const hash = href.includes('#') ? href.split('#')[1] : (e.currentTarget && e.currentTarget.hash ? e.currentTarget.hash.substring(1) : '');
+  if(!hash) return;
+  const targetElement = document.getElementById(hash);
+  if(!targetElement) return;
+
+  // Close mobile menu first so header height reflects final layout
+  const headerContainer = document.getElementById('header-container');
+  const isDesktop = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(min-width: 1024px)').matches;
+  if(headerContainer && !isDesktop && !headerContainer.classList.contains('deactivated')) {
+    headerContainer.classList.add('deactivated');
+  }
+
+  // Measure after layout settles, then scroll with exact offset for fixed header
+  requestAnimationFrame(() => {
+    const headerEl = document.querySelector('#header-container header');
+    const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+    const y = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 8; // small extra margin
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: Math.max(0, y), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
 }
 
 function changeMenuStyle(transparent = 'true') {
@@ -33,8 +51,25 @@ function checkScrollPosition(e) {
 
 export default function Home() {
   React.useEffect(()=>{
-    window.addEventListener('scroll', checkScrollPosition);
-  });
+    window.addEventListener('scroll', checkScrollPosition, { passive: true });
+
+    // If the page loads with a hash, scroll precisely to the section
+    if(typeof window !== 'undefined' && window.location && window.location.hash){
+      const id = window.location.hash.substring(1);
+      const el = document.getElementById(id);
+      if(el){
+        requestAnimationFrame(() => {
+          const headerEl = document.querySelector('#header-container header');
+          const headerHeight = headerEl ? headerEl.offsetHeight : 0;
+          const y = el.getBoundingClientRect().top + window.scrollY - headerHeight - 8;
+          const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: Math.max(0, y), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        });
+      }
+    }
+
+    return () => window.removeEventListener('scroll', checkScrollPosition);
+  }, []);
   
   return (
     <div className="w-full max-w-80ch" onScroll={checkScrollPosition}>
@@ -78,13 +113,13 @@ export default function Home() {
 
           <nav id="nav" className="deactivated p-4 bg-white z-[49]">
             <ul className="space-y-4 lg:flex lg:flex-row lg:space-x-4 lg:space-y-0 items-center lg:mb-0 lg:text-sm">
-              <li><a href="#problem" onClick={scrollTo}>The Problem</a></li>
-              <li><a href="#solution" onClick={scrollTo}>The Solution</a></li>
-              <li><a href="#demo" onClick={scrollTo}>Demo</a></li>
-              <li><a href="#privacy" onClick={scrollTo}>Privacy Deep Dive</a></li>
-              <li><a href="#how" onClick={scrollTo}>How It Works</a></li>
-              <li><a href="#action" onClick={scrollTo}>Take Action</a></li>
-              <li><a href="#faq" onClick={scrollTo}>FAQ</a></li>
+              <li><a href="#problem" onClick={scrollToSection}>The Problem</a></li>
+              <li><a href="#solution" onClick={scrollToSection}>The Solution</a></li>
+              <li><a href="#demo" onClick={scrollToSection}>Demo</a></li>
+              <li><a href="#privacy" onClick={scrollToSection}>Privacy Deep Dive</a></li>
+              <li><a href="#how" onClick={scrollToSection}>How It Works</a></li>
+              <li><a href="#action" onClick={scrollToSection}>Take Action</a></li>
+              <li><a href="#faq" onClick={scrollToSection}>FAQ</a></li>
             </ul>
           </nav>
         </header>
@@ -441,7 +476,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="text-center">
-                  <div className="font-medium text-gray-900 group-hover:text-gray-700">GitHub Documentation</div>
+                  <div className="font-medium text-gray-900 group-hover:text-gray-700">GitHub Repository</div>
                   <div className="text-sm text-gray-500">Technical specifications</div>
                 </div>
               </a>
