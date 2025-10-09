@@ -409,7 +409,43 @@ export default function Home() {
 
           <div className="pt-8 text-center space-y-6">
             <h3 className="text-2xl">Resources</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {/* iOS Source Code */}
+              <a 
+                href="https://github.com/zeugmaster/Signal-iOS" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 flex flex-col items-center space-y-3 group"
+              >
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-600 group-hover:text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                  </svg>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-gray-900 group-hover:text-gray-700">iOS Source Code</div>
+                  <div className="text-sm text-gray-500">Signal fork with Cashu</div>
+                </div>
+              </a>
+
+              {/* Android Source Code */}
+              <a 
+                href="https://github.com/lollerfirst/Signal-Android" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 flex flex-col items-center space-y-3 group"
+              >
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-gray-600 group-hover:text-gray-800" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/>
+                  </svg>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-gray-900 group-hover:text-gray-700">Android Source Code</div>
+                  <div className="text-sm text-gray-500">Signal fork with Cashu</div>
+                </div>
+              </a>
+
               {/* Cashu Website */}
               <a 
                 href="https://cashu.space" 
@@ -441,7 +477,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="text-center">
-                  <div className="font-medium text-gray-900 group-hover:text-gray-700">GitHub Documentation</div>
+                  <div className="font-medium text-gray-900 group-hover:text-gray-700">Cashu Documentation</div>
                   <div className="text-sm text-gray-500">Technical specifications</div>
                 </div>
               </a>
