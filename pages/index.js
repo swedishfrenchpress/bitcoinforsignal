@@ -496,7 +496,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#3C3744] text-[#E9E9E9] py-12 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             {/* Left Section - Copyright and Info */}
             <div className="lg:col-span-2 space-y-4">
@@ -528,18 +528,6 @@ export default function Home() {
                   </span>
                 </a>
               </div>
-            </div>
-
-            {/* Download Signal Column */}
-            <div className="space-y-3">
-              <h4 className="block font-semibold text-[#E9E9E9] mb-3" style={{fontWeight: 600, marginBottom: '12px', fontSize: '16px'}}>Download Signal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="https://signal.org/android" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Android</a></li>
-                <li><a href="https://signal.org/iphone" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>iPhone & iPad</a></li>
-                <li><a href="https://signal.org/desktop" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Windows</a></li>
-                <li><a href="https://signal.org/desktop" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Mac</a></li>
-                <li><a href="https://signal.org/desktop" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Linux</a></li>
-              </ul>
             </div>
 
             {/* Cashu Resources Column */}
