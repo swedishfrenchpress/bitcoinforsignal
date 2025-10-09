@@ -48,12 +48,15 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta property="og:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
-        <meta property="og:image" content="/og-image2.jpg" />
+        <meta property="og:image" content="/og-image2.jpg?v2" />
         <meta property="og:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
-        <meta name="twitter:image" content="/og-image2.jpg" />
+        <meta name="twitter:image" content="/og-image2.jpg?v2" />
+        <meta name="twitter:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
+        <meta property="og:url" content="https://bitcoinforsignal.com" />
+        <meta property="og:site_name" content="Bitcoin for Signal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -114,7 +117,7 @@ export default function Home() {
                 <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
                     Bitcoin belongs in Signal.
-                    Cashu ecash enables truly private bitcoin payments
+                    Cashu ecash enables truly private bitcoin micropayments
                     inside the world's most trusted encrypted messenger.
                   </TextScramble>
                 </h3>
