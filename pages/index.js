@@ -77,8 +77,8 @@ export default function Home() {
             <ul className="space-y-4 lg:flex lg:flex-row lg:space-x-4 lg:space-y-0 items-center lg:mb-0 lg:text-sm">
               <li><a href="#problem" onClick={scrollTo}>The Problem</a></li>
               <li><a href="#solution" onClick={scrollTo}>The Solution</a></li>
-              <li><a href="#privacy" onClick={scrollTo}>Privacy Deep Dive</a></li>
               <li><a href="#demo" onClick={scrollTo}>Demo</a></li>
+              <li><a href="#privacy" onClick={scrollTo}>Privacy Deep Dive</a></li>
               <li><a href="#how" onClick={scrollTo}>How It Works</a></li>
               <li><a href="#action" onClick={scrollTo}>Take Action</a></li>
               <li><a href="#faq" onClick={scrollTo}>FAQ</a></li>
@@ -124,9 +124,8 @@ export default function Home() {
                   <a 
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                       "Signal protects your messages. Bitcoin protects your money.\n\n" +
-                      "Time to bring them together with Cashu ecash.\n\n" +
-                      "See the proof-of-concept: bitcoinforsignal.org\n\n" +
-                      "@Signalapp #BitcoinForSignal 🔒₿"
+                      "Time to bring them together. @Signalapp #BitcoinForSignal 🔒₿\n\n" +
+                      "https://bitcoinforsignal.com/"
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -499,7 +498,7 @@ export default function Home() {
             {/* Left Section - Copyright and Info */}
             <div className="lg:col-span-2 space-y-4">
               <p className="text-sm text-[#E9E9E9]">
-                © 2025 Bitcoin for Signal. This is a grassroots advocacy campaign, not an official Signal or Cashu project.
+                🄯 2025 Bitcoin for Signal. This is a grassroots advocacy campaign, not an official Signal or Cashu project.
               </p>
               <p className="text-sm text-[#E9E9E9]">
                 "Signal", Signal logos, and other trademarks are trademarks or registered trademarks of Signal Technology Foundation.
