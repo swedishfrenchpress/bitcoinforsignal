@@ -522,6 +522,25 @@ export default function Home() {
               <p className="text-sm text-[#E9E9E9]">
                 For media inquiries about this campaign, contact us at <a href="mailto:bitcoinforsignal@proton.me" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>bitcoinforsignal@proton.me</a>.
               </p>
+              
+              {/* Bitcoin Design Community Credit */}
+              <div className="pt-2">
+                <a 
+                  href="https://bitcoin.design" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center space-x-2 text-[#E9E9E9] hover:text-white transition group"
+                >
+                  <img 
+                    src="/bdc-logo.svg" 
+                    alt="Bitcoin Design Community" 
+                    className="h-6 w-6"
+                  />
+                  <span className="text-sm group-hover:underline" style={{fontWeight: 500}}>
+                    Website designed by the Bitcoin Design Community
+                  </span>
+                </a>
+              </div>
             </div>
 
             {/* Download Signal Column */}
