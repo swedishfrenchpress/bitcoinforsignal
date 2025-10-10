@@ -152,8 +152,8 @@ export default function Home() {
               <div className="order-3 lg:order-2">
                 <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
-                    Bitcoin belongs in Signal.
-                    Cashu ecash enables truly private bitcoin micropayments
+                    We love Signal. And we also love Bitcoin.
+                    Cashu ecash enables truly private Bitcoin micropayments
                     inside the world's most trusted encrypted messenger.
                   </TextScramble>
                 </h3>
@@ -170,7 +170,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <div className="bg-white px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
-                      Share This Campaign On X
+                      Signal your support on X
                     </div>
                   </a>
                 </div>
@@ -204,10 +204,10 @@ export default function Home() {
               </h3>
 
               <p>
-              Signal enables private communication for everyone. But the moment we leave Signal to make a payment, our interactions become traceable.
+              Signal enables private communication for everyone. By protecting our freedom of speech as the world's most trusted messenger, Signal is the natural place for privacy-preserving commerce that can protect our freedom to transact with each other.
               </p>
 
-              <p>Signal aimed to solve this problem by integrating MobileCoin. But a currency that has hardly any adoption becomes just another hurdle for our privacy.</p>
+              <p>Signal aimed to solve this problem by integrating MobileCoin, a speculative cryptocurrency that has failed to gain significant adoption. Today, most users aren't even aware that this this feature exists.</p>
 
             </div>
 
@@ -226,14 +226,14 @@ export default function Home() {
                 <img src="/signal-hidden.jpg" alt="Cashu x Signal integration" className="w-full max-w-sm object-contain" />
               </div>
 
-              <h3>Bitcoin Is the Obvious Answer.</h3>
+              <h3>Bitcoin Is the Answer.</h3>
 
               <p>
-              As the most widely adopted cryptocurrency, Bitcoin gives any Signal user plausible deniability. 
+              We love Signal and want to bring the best payment experience to the best private messenger in the world. As the most widely adopted cryptocurrency, Bitcoin is ideal as the backbone for the new global economy.
               </p>
 
               <p>
-              With the Cashu ecash protocol, built around Chaumian blind signatures, Signal users are enabled to anonymously send and receive Bitcoin micropayments natively within the Signal app.
+              Using the Cashu protocol, a Chaumian ecash system that provides strong privacy, Signal users can send and receive Bitcoin micropayments. Instant peer-to-peer payments natively within the Signal app.
               </p>
             </div>
 
@@ -247,7 +247,7 @@ export default function Home() {
             <h2 className="text-signal-blue" id="demo">See It In Action</h2>
 
             <p className="max-w-4xl mx-auto">
-              The Signal x Cashu fork demonstrates how private bitcoin payments can work seamlessly inside Signal.
+              The Signal Cashu fork demonstrates how bitcoin payments can work seamlessly inside Signal.
             </p>
 
             <div className="flex flex-col space-y-8 pb-12">
@@ -259,7 +259,7 @@ export default function Home() {
                   <source src="/signal-demo.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <p className="text-center text-signal-text max-w-4xl">Watch how seamlessly users can send bitcoin ecash tokens directly in their Signal conversations.</p>
+                <p className="text-center text-signal-text max-w-4xl">Users can send ecash directly in their Signal conversations, like handing over a physical bill to your friend.</p>
               </div>
               
               <div className="flex flex-col items-center space-y-4">
@@ -285,19 +285,19 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>Chaumian blind signatures</strong> ensure 
-                that when you mint ecash tokens, the mint cannot link those tokens back to you when you later spend them. 
-                This is cryptographic privacy, not just anonymity through obscurity.
+                <strong>Chaumian ecash</strong> ensures user privacy while enabling instant and cheap payments, even for tiny amounts. Ecash is not a cryptocurrency but a 
+                representation of another asset. No speculation, no get quick rich schemes. 
+                Cashu works best with Bitcoin, but 
+                it is compatible with any other currency, even for fiat currencies like USD.
               </p>
 
               <p>
-                <strong>No metadata leakage</strong> through Cashu mints. Bitcoin's base layer exposes amounts, addresses, and timing.
-                Lightning is better, but still reveals payment channel relationships. Cashu tokens can be sent
-                peer-to-peer with zero on-chain footprint and no revealing metadata.
+                <strong>Blind signatures</strong> are the cryptographic primitive that enable cash-like privacy for digital money.
+                Originally introduced in the 80s by visionary cryptographer David Chaum, this technique is experiencing a renaissance in recent years.
               </p>
 
               <p>
-                This integration doesn't compromise Signal's privacy guarantees &mdash; it extends them to financial
+                The Cashu Signal integration doesn't compromise Signal's privacy guarantees &mdash; it extends them to financial
                 transactions. Your messages are private. Your payments should be too.
               </p>
             </div>
@@ -305,7 +305,7 @@ export default function Home() {
               <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
                 <h4 className="font-semibold text-signal-text-strong mb-3">The Math Behind the Privacy</h4>
                 <p className="text-sm text-signal-text mb-3">
-                  Cashu uses Blind Diffie-Hellmann Key Exchange (BDHKE) to achieve unlinkability:
+                  Cashu uses a Blind Diffie-Hellmann Key Exchange (BDHKE) to achieve unlinkability:
                 </p>
                 <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded border">
                   <div>1. Mint <code className="bg-gray-100 px-1 rounded">Bob</code> publishes public key <span className="bg-gray-100 px-1 rounded"><InlineMath math={'K = kG'} /></span>.</div>
@@ -317,9 +317,8 @@ export default function Home() {
                   <div>7. <code className="bg-gray-100 px-1 rounded">Carol</code> sends <span className="bg-gray-100 px-1 rounded"><InlineMath math={'(x, C)'} /></span> to <code className="bg-gray-100 px-1 rounded">Bob</code> who then checks that <span className="bg-gray-100 px-1 rounded"><InlineMath math={'k \\cdot \\mathrm{hash\\_to\\_curve}(x) = C'} /></span>, and if so treats it as a valid spend.</div>
                 </div>
                 <p className="text-xs text-signal-text-weak mt-3">
-                  Where G is the generator point, k is the mint's private key, and the blinding factor r ensures 
-                  the mint cannot correlate the blinded request with the final token. The mint can verify tokens 
-                  without knowing who originally minted them.
+                  Where all upper-case symbols are elliptic curve points and <InlineMath math={'G'}/> is the generator point, <InlineMath math={'k'}/> is the mint's private key, and <InlineMath math={'r'}/> is a blinding factor. The mint can verify tokens 
+                  without knowing who originally created them.
                 </p>
               </div>
             </div>
@@ -332,21 +331,22 @@ export default function Home() {
               <h3>Technical Overview for Developers</h3>
 
               <p>
-                <strong>The Signal + Cashu integration</strong> works by embedding a lightweight
-                Cashu wallet directly into the Signal app. Users connect to a Cashu mint (which acts as a
-                custodian for bitcoin) and can mint, send, and receive ecash tokens.
+                <strong>The Signal Cashu integration</strong> embeds a lightweight
+                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk">Cashu Development Kit</a>. Building with Cashu is as simple as it gets. We integrated Cashu into Siganl for iOS and for Android. The result is beautiful and provides an intuitive user experience. 
               </p>
 
               <p>
-                <strong>Ecash is stored locally</strong> and wallets store user balances locally on their device. When a user sends a payment, the app generates a Cashu token, and sends it as an encrypted message. The recipient's Signal app automatically detects the token and adds it to their balance.
+                <strong>Ecash is like physical cash</strong> and is stored locally in the user's device. To make a payment, the user sends ecash through the encrypted Signal chat, like any other text message. The recipient's Signal app detects the payment and receives it into the builtin Cashu wallet. Nobody facilitates the payment for you, it all stays 
+                between you and your friends.
               </p>
 
               <p>
-                <strong>Mints on Bitcoin</strong> enable payments through Lightning. Users can send and receive payments from anyone, anywhere, at any time. Whether its from another Signal contact, or a merchant that accepts Bitcoin.
+                <strong>Cashu Mints</strong> issue ecash in return for payments on the Bitcoin network. Users deposit Bitcoin to a mint and the mint acts as a trusted custodian for the Bitcoin it receives. Think of it like a community bank, but with strong privacy.
+                Mints allow users to send and receive payments from anyone, anywhere, at any time. Whether its from another Signal contact, or a merchant that accepts Bitcoin.
               </p>
 
               <p>
-                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. This means that anyone can run a Cashu mint and anyone can use any Cashu wallet. The protocol is defined in the Cashu <a href="https://cashubtc.github.io/nuts">specifications</a>.
+                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. This means that any individual or organization can run a mint or make a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu">open-source ecosystem</a> and there are multiple open-source Cashu wallet and mint implementations and developer libraries in various programming languages <a href="https://docs.cashu.space/">to chose from</a>. The protocol is defined in the Cashu <a href="https://cashubtc.github.io/nuts">specifications</a>.
               </p>
 
             </div>
@@ -354,7 +354,7 @@ export default function Home() {
               <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
                 <h4 className="font-semibold text-signal-text-strong mb-3">Protocol Specifications</h4>
                 <p className="text-sm text-signal-text mb-4">
-                  The Cashu protocol is defined by a set of specifications called NUTs (Notation, Usage, and Terminology):
+                  The Cashu protocol is defined by a set of open specifications called NUTs (Notation, Usage, and Terminology):
                 </p>
                 
                 <div className="space-y-4">
