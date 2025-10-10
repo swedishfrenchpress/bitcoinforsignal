@@ -573,7 +573,7 @@ export default function Home() {
             {/* Left Section - Copyright and Info */}
             <div className="lg:col-span-2 space-y-4">
               <p className="text-sm text-[#E9E9E9]">
-                🄯 2025 Bitcoin for Signal. This is a grassroots advocacy campaign, not an official Signal or Cashu project.
+                This is a grassroots advocacy campaign, not an official Signal or Cashu project.
               </p>
               <p className="text-sm text-[#E9E9E9]">
                 "Signal", Signal logos, and other trademarks are trademarks or registered trademarks of Signal Technology Foundation.
