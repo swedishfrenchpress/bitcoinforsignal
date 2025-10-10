@@ -152,8 +152,8 @@ export default function Home() {
               <div className="order-3 lg:order-2">
                 <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
-                    We love Signal. And we also love Bitcoin.
-                    Cashu ecash enables truly private Bitcoin micropayments
+                    We love Signal. That's why we've integrated Cashu
+                    to enable truly private Bitcoin micropayments
                     inside the world's most trusted encrypted messenger.
                   </TextScramble>
                 </h3>
@@ -207,7 +207,7 @@ export default function Home() {
               Signal enables private communication for everyone. By protecting our freedom of speech as the world's most trusted messenger, Signal is the natural place for privacy-preserving commerce that can protect our freedom to transact with each other.
               </p>
 
-              <p>Signal aimed to solve this problem by integrating MobileCoin, a speculative cryptocurrency that has failed to gain significant adoption. Today, most users aren't even aware that this this feature exists.</p>
+              <p>Signal aimed to solve this problem by integrating MobileCoin, a speculative cryptocurrency that has failed to gain meaningful adoption. Today, most Signal users aren't aware that this feature exists.</p>
 
             </div>
 
@@ -281,19 +281,18 @@ export default function Home() {
 
               <p>
                 Signal's mission is to protect privacy. End-to-end encryption ensures that no one &mdash; not even
-                Signal &mdash; can read your messages. Cashu ecash extends this same principle to money.
+                Signal &mdash; can read your messages. Cashu extends this same principle to money.
               </p>
 
               <p>
                 <strong>Chaumian ecash</strong> ensures user privacy while enabling instant and cheap payments, even for tiny amounts. Ecash is not a cryptocurrency but a 
-                representation of another asset. No speculation, no get quick rich schemes. 
-                Cashu works best with Bitcoin, but 
-                it is compatible with any other currency, even for fiat currencies like USD.
+                representation of an asset, just like how physical cash represents your money. No speculation, no get quick rich schemes. 
+                Cashu works best with Bitcoin but it is compatible even with fiat currencies like USD.
               </p>
 
               <p>
-                <strong>Blind signatures</strong> are the cryptographic primitive that enable cash-like privacy for digital money.
-                Originally introduced in the 80s by visionary cryptographer David Chaum, this technique is experiencing a renaissance in recent years.
+                <strong>Blind signatures</strong> are the cryptographic primitive that enable cash-like privacy in the digital world.
+                Introduced in the 80s by visionary cryptographer David Chaum, ecash is experiencing a renaissance in recent years due to open-source projects like Cashu.
               </p>
 
               <p>
@@ -332,11 +331,11 @@ export default function Home() {
 
               <p>
                 <strong>The Signal Cashu integration</strong> embeds a lightweight
-                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk">Cashu Development Kit</a>. Building with Cashu is as simple as it gets. We integrated Cashu into Siganl for iOS and for Android. The result is beautiful and provides an intuitive user experience. 
+                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
               </p>
 
               <p>
-                <strong>Ecash is like physical cash</strong> and is stored locally in the user's device. To make a payment, the user sends ecash through the encrypted Signal chat, like any other text message. The recipient's Signal app detects the payment and receives it into the builtin Cashu wallet. Nobody facilitates the payment for you, it all stays 
+                <strong>Ecash is like physical cash</strong> and is stored locally on the user's device. To make a payment, the user sends ecash through the encrypted Signal chat, like any other text message. Nobody facilitates the payment for you, everything stays 
                 between you and your friends.
               </p>
 
@@ -346,7 +345,7 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. This means that any individual or organization can run a mint or make a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu">open-source ecosystem</a> and there are multiple open-source Cashu wallet and mint implementations and developer libraries in various programming languages <a href="https://docs.cashu.space/">to chose from</a>. The protocol is defined in the Cashu <a href="https://cashubtc.github.io/nuts">specifications</a>.
+                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/">developer libraries</a> to chose from.
               </p>
 
             </div>
@@ -387,11 +386,11 @@ export default function Home() {
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
-          <h2 className="text-signal-blue" id="action">Take Action</h2>
+          <h2 className="text-signal-blue" id="action">Signal Support</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
-            This proof-of-concept demonstrates that Cashu x Signal is technically feasible.
-            Now we need to show Signal that there's demand for this integration.
+            Our proof-of-concept demonstrates that Cashu Signal is technically feasible.
+            If you like this idea as much as we do, show your support and let's spark the imagination of the open-source world.
           </p>
 
           {/* Share Campaign Button */}
@@ -404,7 +403,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className="bg-signal-blue px-8 py-4 text-lg text-white hover:bg-blue-700 transition rounded-md font-medium inline-block">
-                Share This Campaign On X
+                Signal your Support on X
               </div>
             </a>
           </div>
@@ -537,7 +536,7 @@ export default function Home() {
               <div>
                 <h3>How is this Cashu different from MobileCoin?</h3>
                 <p>
-                  Cashu is a purely open-source project with no financial backers or commercial interests. Bitcoin is the world's most liquid and widely-adopted cryptocurrency with deep infrastructure and network effects. Cashu brings strong privacy to bitcoin, making it a pragmatic alternative that Signal users are more likely to actually use.
+                  Cashu is a purely open-source project with no commercial interests. It is not a speculative cryptocurrency but a protocol that works with any asset. Bitcoin is internet's native digital currency with the largest user base across the world. Cashu brings strong privacy to bitcoin, making it a pragmatic solution that Signal can build on.
                 </p>
               </div>
             </div>
@@ -545,18 +544,20 @@ export default function Home() {
               <div>
                 <h3>Will Signal actually do this?</h3>
                 <p>
-                  That depends on community demand. This site and the proof-of-concept are advocacy
-                  tools to show Signal that there's real interest. If enough users, developers, and privacy
-                  advocates speak up, Signal may consider integrating Cashu or a similar bitcoin privacy solution.
+                  Our goal is not to build pressure on Signal but to imagine a better world together with them.
+                  We love and trust Signal. This site and the proof-of-concept are tools to spark their imagination
+                  and to show Signal that there's real interest for global micropayments within their ecosystem.
+                  We would love it Signal considered integrating Cashu or a similar bitcoin privacy solution.
                 </p>
               </div>
 
               <div>
                 <h3>How can I help?</h3>
                 <p>
-                  Share this site, contact Signal to express interest, try the proof-of-concept fork when it's
-                  available, and if you're a developer, contribute to the code or the broader Cashu ecosystem.
-                  The more momentum we build, the more likely this becomes a reality.
+                  Share this site, try the proof-of-concept fork.
+                  The best support you can give is to use privacy-preserving technologies and to share it with your friends. 
+                  If you're a developer, check out the Cashu protocol, consider integrating it with your app, or contribute to the Cashu code or the broader Cashu ecosystem directly.
+                  To support the open-source developers working on Cashu, consider supporting our non-profit <a href="https://opencash.dev/">OpenCash</a>. 
                 </p>
               </div>
             </div>
