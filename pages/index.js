@@ -403,7 +403,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className="bg-signal-blue px-8 py-4 text-lg text-white hover:bg-blue-700 transition rounded-md font-medium inline-block">
-                Signal your Support on X
+                Signal your support on X
               </div>
             </a>
           </div>
