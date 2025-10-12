@@ -306,9 +306,7 @@ export default function Home() {
               <div className="order-3 lg:order-2">
                 <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
-                    We love Signal. That's why we've integrated Cashu
-                    to enable truly private Bitcoin micropayments
-                    inside the world's most trusted encrypted messenger.
+                  Signal deserves Bitcoin payments as private as its messages. Cashu ecash enables private bitcoin payments inside the world's most trusted encrypted messenger. No compromises on privacy.
                   </TextScramble>
                 </h3>
 
@@ -358,10 +356,14 @@ export default function Home() {
               </h3>
 
               <p>
-              Signal enables private communication for everyone. By protecting our freedom of speech as the world's most trusted messenger, Signal is the natural place for privacy-preserving commerce that can protect our freedom to transact with each other.
+              Signal enables private communication for everyone, but the moment we leave Signal to make a payment, our interactions become traceable. Creating a privacy gap between our messages and our money.
               </p>
 
-              <p>Signal aimed to solve this problem by integrating MobileCoin, a speculative cryptocurrency that has failed to gain meaningful adoption. Today, most Signal users aren't aware that this feature exists.</p>
+              <p>Signal integrated MobileCoin to solve this, but most Signal users don't even know this feature exists. And for those who do, there's another problem: a payment system that's only used within Signal reveals you're a Signal user.
+              </p>
+                
+              <p>Without meaningful adoption beyond Signal, MobileCoin creates a new privacy risk instead of solving the original one.
+              </p>
 
             </div>
 
@@ -380,14 +382,14 @@ export default function Home() {
                 <img src="/signal-hidden.jpg" alt="Cashu x Signal integration" className="w-full max-w-sm object-contain" />
               </div>
 
-              <h3>Bitcoin Is the Answer.</h3>
+              <h3>Bitcoin + Cashu = Private Payments.</h3>
 
               <p>
-              We love Signal and want to bring the best payment experience to the best private messenger in the world. As the most widely adopted cryptocurrency, Bitcoin is ideal as the backbone for the new global economy.
+              Bitcoin is the obvious choice. As the most widely adopted cryptocurrency, using Bitcoin gives Signal users plausible deniability—you can't be identified as a Signal user simply by transacting in Bitcoin.
               </p>
 
               <p>
-              Using the Cashu protocol, a Chaumian ecash system that provides strong privacy, Signal users can send and receive Bitcoin micropayments. Instant peer-to-peer payments natively within the Signal app.
+              But Bitcoin alone isn't enough. Cashu ecash, built on Chaumian blind signatures, adds the privacy layer Bitcoin lacks. With Cashu, Signal users can send and receive Bitcoin micropayments completely anonymously, natively within the app. Private messages meet private money.
               </p>
             </div>
 
