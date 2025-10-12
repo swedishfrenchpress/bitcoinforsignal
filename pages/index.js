@@ -14,6 +14,160 @@ function toggleMenu() {
   else header.classList.add('deactivated');
 }
 
+// Shareable assets data structure - Easy to add more designs and platforms!
+// TO ADD MORE DESIGNS: Simply add a new object to this array with your image filenames
+const SHAREABLE_ASSETS = [
+  {
+    id: 'design-1',
+    name: 'Design 1',
+    description: 'Clean and modern design highlighting privacy',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x1.jpg',
+        downloadName: 'bitcoin-for-signal-x.jpg',
+        aspectRatio: 'aspect-[16/9]' // Adjust based on your actual X image dimensions
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig1.jpg',
+        downloadName: 'bitcoin-for-signal-instagram.jpg',
+        aspectRatio: 'aspect-square' // Instagram is typically square
+      }
+    ]
+  },
+  {
+    id: 'design-2',
+    name: 'Design 2',
+    description: 'Bold typography with clear call-to-action',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x2.jpg',
+        downloadName: 'bitcoin-for-signal-x-2.jpg',
+        aspectRatio: 'aspect-[16/9]'
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig2.jpg',
+        downloadName: 'bitcoin-for-signal-instagram-2.jpg',
+        aspectRatio: 'aspect-square'
+      }
+    ]
+  },
+  {
+    id: 'design-3',
+    name: 'Design 3',
+    description: 'Minimalist aesthetic for maximum impact',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x3.jpg',
+        downloadName: 'bitcoin-for-signal-x-3.jpg',
+        aspectRatio: 'aspect-[16/9]'
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig3.jpg',
+        downloadName: 'bitcoin-for-signal-instagram-3.jpg',
+        aspectRatio: 'aspect-square'
+      }
+    ]
+  },
+  // ⬇️ EXAMPLE: Uncomment and modify this template to add more designs ⬇️
+  // {
+  //   id: 'design-2',
+  //   name: 'Design 2',
+  //   description: 'Bold typography focused design',
+  //   variants: [
+  //     { 
+  //       platform: 'X (Twitter)', 
+  //       filename: 'x2.jpg', 
+  //       downloadName: 'bitcoin-for-signal-x-2.jpg', 
+  //       aspectRatio: 'aspect-[16/9]' 
+  //     },
+  //     { 
+  //       platform: 'Instagram', 
+  //       filename: 'ig2.jpg', 
+  //       downloadName: 'bitcoin-for-signal-instagram-2.jpg', 
+  //       aspectRatio: 'aspect-square' 
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 'design-3',
+  //   name: 'Design 3',
+  //   description: 'Minimalist design with bold call-to-action',
+  //   variants: [
+  //     { 
+  //       platform: 'X (Twitter)', 
+  //       filename: 'x3.jpg', 
+  //       downloadName: 'bitcoin-for-signal-x-3.jpg', 
+  //       aspectRatio: 'aspect-[16/9]' 
+  //     },
+  //     { 
+  //       platform: 'Instagram', 
+  //       filename: 'ig3.jpg', 
+  //       downloadName: 'bitcoin-for-signal-instagram-3.jpg', 
+  //       aspectRatio: 'aspect-square' 
+  //     },
+  //     // You can even add more platforms like LinkedIn, Facebook, etc:
+  //     // { 
+  //     //   platform: 'LinkedIn', 
+  //     //   filename: 'linkedin3.jpg', 
+  //     //   downloadName: 'bitcoin-for-signal-linkedin-3.jpg', 
+  //     //   aspectRatio: 'aspect-[1.91/1]' 
+  //     // }
+  //   ]
+  // }
+];
+
+// Reusable component for rendering a downloadable asset
+const DownloadableAsset = ({ filename, downloadName, platform, aspectRatio }) => (
+  <div className="flex flex-col items-center space-y-2">
+    <a
+      href={`/${filename}`}
+      download={downloadName}
+      className="relative group cursor-pointer block w-full"
+    >
+      {/* Image container with elegant hover effect */}
+      <div className="relative overflow-hidden rounded-lg border-2 border-signal-border-weak group-hover:border-signal-blue transition-all duration-500 shadow-sm group-hover:shadow-2xl">
+        <img
+          src={`/${filename}`}
+          alt={`Share on ${platform}`}
+          className="w-full h-auto transition-all duration-500 group-hover:brightness-110"
+        />
+        
+        {/* Subtle overlay on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Download icon overlay - positioned at bottom left */}
+        <div className="absolute bottom-3 left-3 bg-signal-blue text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-lg">
+          {/* SVG download icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            />
+          </svg>
+        </div>
+      </div>
+    </a>
+    {/* Platform label below the image */}
+    <span className="text-sm font-medium text-signal-text">
+      {platform}
+    </span>
+  </div>
+);
+
 function scrollToSection(e){
   e.preventDefault();
   const href = e.currentTarget && e.currentTarget.getAttribute ? (e.currentTarget.getAttribute('href') || '') : '';
@@ -264,7 +418,7 @@ export default function Home() {
               
               <div className="flex flex-col items-center space-y-4">
                 <img 
-                  src="/signal-wide.png" 
+                  src="/signal-wide.jpg" 
                   alt="Signal chat with Cashu payment interface" 
                   className="w-full max-w-4xl h-auto"
                 />
@@ -386,7 +540,7 @@ export default function Home() {
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
-          <h2 className="text-signal-blue" id="action">Signal Support</h2>
+          <h2 className="text-signal-blue" id="action">Signal Your Support</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
             Our proof-of-concept demonstrates that Cashu Signal is technically feasible.
@@ -406,6 +560,35 @@ export default function Home() {
                 Signal your support on X
               </div>
             </a>
+          </div>
+
+          {/* Shareable Assets Section - Dynamically rendered from SHAREABLE_ASSETS data */}
+          <div className="max-w-screen-xl pt-8 w-full px-4">
+            <h3 className="text-2xl font-semibold text-signal-text-strong mb-6 text-center">
+              Amplify the Message
+            </h3>
+            {/* Horizontal grid of design cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {SHAREABLE_ASSETS.map((design) => (
+                <div 
+                  key={design.id} 
+                  className="bg-white border border-signal-border-weak rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  {/* Platform variants stacked vertically within this design card */}
+                  <div className="space-y-4">
+                    {design.variants.map((variant, idx) => (
+                      <DownloadableAsset
+                        key={`${design.id}-${idx}`}
+                        filename={variant.filename}
+                        downloadName={variant.downloadName}
+                        platform={variant.platform}
+                        aspectRatio={variant.aspectRatio}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="max-w-screen-lg pt-8 space-y-6">
@@ -434,7 +617,7 @@ export default function Home() {
                 We believe Cashu ecash aligns perfectly with Signal's mission. This integration would:
               </p>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Replace the underutilized MobileCoin integration with the world's most liquid cryptocurrency</li>
+                <li>Replace the underutilized MobileCoin integration with the world's most used cryptocurrency, Bitcoin</li>
                 <li>Maintain Signal's uncompromising privacy standards through Chaumian blind signatures</li>
                 <li>Attract millions of bitcoin users who share Signal's values around privacy and freedom</li>
                 <li>Position Signal as the premier private communication and payment platform</li>
@@ -557,7 +740,7 @@ export default function Home() {
                   Share this site, try the proof-of-concept fork.
                   The best support you can give is to use privacy-preserving technologies and to share it with your friends. 
                   If you're a developer, check out the Cashu protocol, consider integrating it with your app, or contribute to the Cashu code or the broader Cashu ecosystem directly.
-                  To support the open-source developers working on Cashu, consider supporting our non-profit <a href="https://opencash.dev/">OpenCash</a>. 
+                  To support the open-source developers working on Cashu, consider supporting our non-profit <a href="https://opencash.dev/" target="_blank" rel="noopener noreferrer">OpenCash</a>. 
                 </p>
               </div>
             </div>
