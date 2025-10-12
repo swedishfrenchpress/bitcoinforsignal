@@ -642,7 +642,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">iOS Source Code</div>
-                  <div className="text-sm text-gray-500">Signal fork with Cashu</div>
                 </div>
               </a>
 
@@ -660,7 +659,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">Android Source Code</div>
-                  <div className="text-sm text-gray-500">Signal fork with Cashu</div>
                 </div>
               </a>
 
@@ -678,7 +676,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">Cashu Official Website</div>
-                  <div className="text-sm text-gray-500">Learn about the protocol</div>
                 </div>
               </a>
 
@@ -696,7 +693,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">Cashu Documentation</div>
-                  <div className="text-sm text-gray-500">Technical specifications</div>
                 </div>
               </a>
 
