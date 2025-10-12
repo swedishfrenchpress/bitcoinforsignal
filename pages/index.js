@@ -273,7 +273,7 @@ export default function Home() {
               <li><a href="#demo" onClick={scrollToSection}>Demo</a></li>
               <li><a href="#privacy" onClick={scrollToSection}>Privacy Deep Dive</a></li>
               <li><a href="#how" onClick={scrollToSection}>How It Works</a></li>
-              <li><a href="#action" onClick={scrollToSection}>Take Action</a></li>
+              <li><a href="#action" onClick={scrollToSection}>Signal Your Support</a></li>
               <li><a href="#faq" onClick={scrollToSection}>FAQ</a></li>
             </ul>
           </nav>
