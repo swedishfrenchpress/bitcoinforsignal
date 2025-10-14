@@ -74,6 +74,25 @@ const SHAREABLE_ASSETS = [
       }
     ]
   },
+  {
+    id: 'design-4',
+    name: 'Design 4',
+    description: 'Fresh design for maximum engagement',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x4.jpg',
+        downloadName: 'bitcoin-for-signal-x-4.jpg',
+        aspectRatio: 'aspect-[16/9]'
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig4.jpg',
+        downloadName: 'bitcoin-for-signal-instagram-4.jpg',
+        aspectRatio: 'aspect-square'
+      }
+    ]
+  },
   // ⬇️ EXAMPLE: Uncomment and modify this template to add more designs ⬇️
   // {
   //   id: 'design-2',
@@ -570,7 +589,7 @@ export default function Home() {
               Amplify the Message
             </h3>
             {/* Horizontal grid of design cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {SHAREABLE_ASSETS.map((design) => (
                 <div 
                   key={design.id} 
