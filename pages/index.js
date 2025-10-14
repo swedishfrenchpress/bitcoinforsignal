@@ -333,9 +333,7 @@ export default function Home() {
                 <div className="animate-fade-in-up animation-delay-400">
                   <a 
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                      "Signal protects your messages. Bitcoin protects your money.\n\n" +
-                      "Time to bring them together. @Signalapp #BitcoinForSignal 🔒₿\n\n" +
-                      "https://bitcoinforsignal.com/"
+                      "Private messaging needs private money. @Signalapp should integrate Bitcoin payments using Cashu ecash for maximum privacy. Check out this proof-of-concept: https://bitcoinforsignal.org #BitcoinForSignal #Signal #Cashu"
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -506,7 +504,7 @@ export default function Home() {
 
               <p>
                 <strong>The Signal Cashu integration</strong> embeds a lightweight
-                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
+                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk" target="_blank" rel="noopener noreferrer">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
               </p>
 
               <p>
@@ -520,7 +518,7 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/">developer libraries</a> to chose from.
+                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu" target="_blank" rel="noopener noreferrer">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/" target="_blank" rel="noopener noreferrer">developer libraries</a> to chose from.
               </p>
 
             </div>
@@ -535,25 +533,25 @@ export default function Home() {
                   <div>
                     <h5 className="font-semibold text-signal-text-strong mb-2 text-signal-blue">Mandatory</h5>
                     <ul className="text-sm text-signal-text space-y-1 ml-4">
-                      <li>• <a href="https://cashubtc.github.io/nuts/00/" className="text-blue-600 hover:underline font-medium">NUT-00: Cryptography</a> - Cryptographic primitives</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/03/" className="text-blue-600 hover:underline font-medium">NUT-03: Swapping Tokens</a> - Double spend protection</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/04/" className="text-blue-600 hover:underline font-medium">NUT-04: Minting</a> - Token issuance</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/00/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-00: Cryptography</a> - Cryptographic primitives</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/03/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-03: Swapping Tokens</a> - Double spend protection</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/04/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-04: Minting</a> - Token issuance</li>
                     </ul>
                   </div>
                   
                   <div>
                     <h5 className="font-semibold text-signal-text-strong mb-2 text-orange-600">Optional</h5>
                     <ul className="text-sm text-signal-text space-y-1 ml-4">
-                      <li>• <a href="https://cashubtc.github.io/nuts/11/" className="text-blue-600 hover:underline font-medium">NUT-11: Pay to Public Key</a> - Programmable payments</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/12/" className="text-blue-600 hover:underline font-medium">NUT-12: DLEQ Proofs</a> - Discrete Log Equality proofs</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/16/" className="text-blue-600 hover:underline font-medium">NUT-16: Animated QR Codes</a> - Dynamic QR codes</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/22/" className="text-blue-600 hover:underline font-medium">NUT-22: Blind Authentication</a> - Privacy-preserving authentication</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/11/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-11: Pay to Public Key</a> - Programmable payments</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/12/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-12: DLEQ Proofs</a> - Discrete Log Equality proofs</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/16/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-16: Animated QR Codes</a> - Dynamic QR codes</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/22/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-22: Blind Authentication</a> - Privacy-preserving authentication</li>
                     </ul>
                   </div>
                 </div>
                 
                 <p className="text-xs text-signal-text-weak mt-4">
-                  Complete specifications and implementation details available in the <a href="https://github.com/cashubtc/nuts" className="text-blue-600 hover:underline">Cashu NUTs repository</a>.
+                  Complete specifications and implementation details available in the <a href="https://github.com/cashubtc/nuts" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Cashu NUTs repository</a>.
                 </p>
               </div>
             </div>
@@ -626,22 +624,20 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Developers</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Review the Signal + Cashu proof-of-concept code</li>
-                <li>Help refine the UX and security model</li>
                 <li>Build complementary tools (mint infrastructure, testing tools, etc.)</li>
-                <li>Learn about <a href="https://cashu.space">Cashu</a> and contribute to the broader ecosystem</li>
+                <li>Learn about <a href="https://cashu.space" target="_blank" rel="noopener noreferrer">Cashu</a> and join the <a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer">discussion</a>.</li>
               </ul>
             </div>
 
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Decision Makers at Signal</h3>
               <p className="text-signal-text">
-              Cashu naturally aligns with Signal's privacy first mission. This integration offers:
+              Cashu naturally aligns with Signal's privacy first mission.
               </p>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Strong privacy guarantees - Chaumian blind signatures provide truly anonymous payments, matching Signal's standard for messages</li>
-                <li>Plausible deniability - Bitcoin's widespread adoption means using it doesn't identify you as a Signal user</li>
-                <li>Better UX - Millions of users already understand and hold Bitcoin, removing barriers to adoption</li>
-                <li>Mission alignment - Privacy-preserving payments that serve Signal's existing community without compromise</li>
+                <li>Encrypted messages deserve encrypted money, Cashu enables truly anonymous Bitcoin payments</li>
+                <li>Widespread Bitcoin adoption protects user privacy better than specialized cryptocurrencies</li>
+                <li>Bitcoin brings millions of potential new users, more users means better privacy for everyone</li>
               </ul>
             </div>
           </div>
@@ -734,7 +730,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3>How is this Cashu different from MobileCoin?</h3>
+                <h3>How is Cashu different from MobileCoin?</h3>
                 <p>
                   Cashu is a purely open-source project with no commercial interests. It is not a speculative cryptocurrency but a protocol that works with any asset. Bitcoin is internet's native digital currency with the largest user base across the world. Cashu brings strong privacy to bitcoin, making it a pragmatic solution that Signal can build on.
                 </p>
@@ -744,10 +740,9 @@ export default function Home() {
               <div>
                 <h3>Will Signal actually do this?</h3>
                 <p>
-                  Our goal is not to build pressure on Signal but to imagine a better world together with them.
-                  We love and trust Signal. This site and the proof-of-concept are tools to spark their imagination
+                  We love and trust Signal and want to imagine a better world together with them. This site and the proof-of-concept are tools to spark their imagination
                   and to show Signal that there's real interest for global micropayments within their ecosystem.
-                  We would love it Signal considered integrating Cashu or a similar bitcoin privacy solution.
+                  Together with Signal, we would love to start a discussion about integrating Cashu or a similar bitcoin privacy solution.
                 </p>
               </div>
 
@@ -780,7 +775,7 @@ export default function Home() {
                 "Signal", Signal logos, and other trademarks are trademarks or registered trademarks of Signal Technology Foundation.
               </p>
               <p className="text-sm text-[#E9E9E9]">
-                For media inquiries about this campaign, contact us at <a href="mailto:bitcoinforsignal@proton.me" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>bitcoinforsignal@proton.me</a>.
+                For media inquiries about this campaign, contact us at <a href="mailto:bitcoinforsignal@proton.me" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>bitcoinforsignal@proton.me</a>.
               </p>
               
               {/* Bitcoin Design Community Credit */}
