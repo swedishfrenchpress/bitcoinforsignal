@@ -616,13 +616,13 @@ export default function Home() {
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Decision Makers at Signal</h3>
               <p className="text-signal-text">
-                We believe Cashu ecash aligns perfectly with Signal's mission. This integration would:
+              Cashu naturally aligns with Signal's privacy first mission. This integration offers:
               </p>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Replace the underutilized MobileCoin integration with the world's most used cryptocurrency, Bitcoin</li>
-                <li>Maintain Signal's uncompromising privacy standards through Chaumian blind signatures</li>
-                <li>Attract millions of bitcoin users who share Signal's values around privacy and freedom</li>
-                <li>Position Signal as the premier private communication and payment platform</li>
+                <li>Strong privacy guarantees - Chaumian blind signatures provide truly anonymous payments, matching Signal's standard for messages</li>
+                <li>Plausible deniability - Bitcoin's widespread adoption means using it doesn't identify you as a Signal user</li>
+                <li>Better UX - Millions of users already understand and hold Bitcoin, removing barriers to adoption</li>
+                <li>Mission alignment - Privacy-preserving payments that serve Signal's existing community without compromise</li>
               </ul>
             </div>
           </div>
