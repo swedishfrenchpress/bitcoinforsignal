@@ -312,7 +312,7 @@ export default function Home() {
               {/* Title - appears first on both mobile and desktop */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up order-1" style={{ minHeight: '8rem' }}>
                 <TextScramble speed={25} delay={200}>
-                Private Messaging Needs Private Money.
+                Private Messaging Needs Private Money
                 </TextScramble>
               </h1>
 
@@ -518,7 +518,7 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu" target="_blank" rel="noopener noreferrer">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/" target="_blank" rel="noopener noreferrer">developer libraries</a> to chose from.
+                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu" target="_blank" rel="noopener noreferrer">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/libraries" target="_blank" rel="noopener noreferrer">developer libraries</a> to chose from.
               </p>
 
             </div>
@@ -696,9 +696,9 @@ export default function Home() {
                 </div>
               </a>
 
-              {/* GitHub Documentation */}
+              {/* Cashu Documentation */}
               <a 
-                href="https://github.com/cashubtc" 
+                href="https://docs.cashu.space/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 flex flex-col items-center space-y-3 group"
