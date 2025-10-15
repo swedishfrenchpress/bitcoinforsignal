@@ -804,7 +804,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><a href="https://cashu.space" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Official Website</a></li>
                 <li><a href="https://github.com/cashubtc" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu GitHub</a></li>
-                <li><a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Documentation</a></li>
+                <li><a href="https://docs.cashu.space/" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Documentation</a></li>
                 <li><a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Telegram</a></li>
                 <li><a href="https://x.com/CashuBTC" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu on X</a></li>
               </ul>
