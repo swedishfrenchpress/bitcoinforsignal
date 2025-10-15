@@ -752,7 +752,6 @@ export default function Home() {
                   Share this site, try the proof-of-concept fork.
                   The best support you can give is to use privacy-preserving technologies and to share it with your friends. 
                   If you're a developer, check out the Cashu protocol, consider integrating it with your app, or contribute to the Cashu code or the broader Cashu ecosystem directly.
-                  To support the open-source developers working on Cashu, consider supporting our non-profit <a href="https://opencash.dev/" target="_blank" rel="noopener noreferrer">OpenCash</a>. 
                 </p>
               </div>
             </div>
