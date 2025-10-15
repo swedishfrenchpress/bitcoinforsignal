@@ -257,14 +257,18 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta property="og:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
-        <meta property="og:image" content="/og-image2.jpg?v2" />
+        <meta property="og:image" content="https://bitcoinforsignal.org/og-image2.jpg?v3" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bitcoinforsignal" />
+        <meta name="twitter:creator" content="@bitcoinforsignal" />
         <meta name="twitter:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
-        <meta name="twitter:image" content="/og-image2.jpg?v2" />
+        <meta name="twitter:image" content="https://bitcoinforsignal.org/og-image2.jpg?v3" />
         <meta name="twitter:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
-        <meta property="og:url" content="https://bitcoinforsignal.com" />
+        <meta property="og:url" content="https://bitcoinforsignal.org" />
         <meta property="og:site_name" content="Bitcoin for Signal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
