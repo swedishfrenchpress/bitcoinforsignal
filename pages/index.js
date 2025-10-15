@@ -504,7 +504,7 @@ export default function Home() {
 
               <p>
                 <strong>The Signal Cashu integration</strong> embeds a lightweight
-                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk" target="_blank" rel="noopener noreferrer">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
+                Cashu wallet directly into Signal using the <a href="https://cashudevkit.org/" target="_blank" rel="noopener noreferrer">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
               </p>
 
               <p>
