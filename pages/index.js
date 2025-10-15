@@ -614,9 +614,9 @@ export default function Home() {
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Signal Users</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Share this site with your Signal contacts and on social media</li>
-                <li>Contact Signal support and express your interest in bitcoin payments</li>
-                <li>Advocate for privacy-preserving bitcoin integration in Signal forums</li>
+                <li>Spread the word by sharing this site with your Signal contacts and on Social Media #bitcoinforsignal</li>
+                <li>Engage with Signal by tagging and mention Signal official accounts in relevant posts</li>
+                <li>Discuss Bitcoin For Signal topic in Signal forums, relevant subreddits, chat groups, or at local meet-ups</li>
               </ul>
             </div>
 
