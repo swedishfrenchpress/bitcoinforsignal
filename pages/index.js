@@ -325,7 +325,7 @@ export default function Home() {
               <div className="order-3 lg:order-2">
                 <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
-                  Signal deserves Bitcoin payments as private as its messages. Cashu ecash enables private bitcoin payments inside the world's most trusted encrypted messenger. No compromises on privacy.
+                  Bitcoin belongs in Signal. Cashu ecash enables truly private bitcoin payments inside the world's most trusted encrypted messenger.
                   </TextScramble>
                 </h3>
 
@@ -339,7 +339,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                   >
                     <div className="bg-white px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
-                      Signal your support on X
+                      Share This On X
                     </div>
                   </a>
                 </div>
@@ -378,10 +378,6 @@ export default function Home() {
 
               <p>Signal integrated MobileCoin to solve this, but most Signal users don't even know this feature exists. And for those who do, there's another problem: a payment system that's only used within Signal reveals you're a Signal user.
               </p>
-                
-              <p>Without meaningful adoption beyond Signal, MobileCoin creates a new privacy risk instead of solving the original one.
-              </p>
-
             </div>
 
             {/* Image appears beside content on desktop with proper spacing */}
@@ -576,7 +572,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <div className="bg-signal-blue px-8 py-4 text-lg text-white hover:bg-blue-700 transition rounded-md font-medium inline-block">
-                Signal your support on X
+                Share This On X
               </div>
             </a>
           </div>
@@ -584,7 +580,7 @@ export default function Home() {
           {/* Shareable Assets Section - Dynamically rendered from SHAREABLE_ASSETS data */}
           <div className="max-w-screen-xl pt-8 w-full px-4">
             <h3 className="text-2xl font-semibold text-signal-text-strong mb-6 text-center">
-              Amplify the Message
+            Show Your Love For Bitcoin In Signal 
             </h3>
             {/* Horizontal grid of design cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -616,7 +612,7 @@ export default function Home() {
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Spread the word by sharing this site with your Signal contacts and on Social Media #bitcoinforsignal</li>
                 <li>Engage with Signal by tagging and mention Signal official accounts in relevant posts</li>
-                <li>Discuss Bitcoin For Signal topic in Signal forums, relevant subreddits, chat groups, or at local meet-ups</li>
+                <li>Discuss Bitcoin For Signal topic in forums, meetups, and with your friends</li>
               </ul>
             </div>
 
