@@ -373,7 +373,7 @@ export default function Home() {
               </div>
 
               <h3>
-                Payments Belong in Signal.
+                Payments Belong in Signal
               </h3>
 
               <p>
@@ -399,7 +399,7 @@ export default function Home() {
                 <img src="/signal-hidden.jpg" alt="Cashu x Signal integration" className="w-full max-w-sm object-contain" />
               </div>
 
-              <h3>Bitcoin + Cashu = Private Payments.</h3>
+              <h3>Bitcoin + Cashu = Private Payments</h3>
 
               <p>
               Bitcoin is the obvious choice. As the most widely adopted cryptocurrency, using Bitcoin gives Signal users plausible deniability—you can't be identified as a Signal user simply by transacting in Bitcoin.
