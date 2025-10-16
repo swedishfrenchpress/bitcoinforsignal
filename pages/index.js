@@ -389,7 +389,7 @@ export default function Home() {
           <h2 className="text-signal-blue" id="action">Signal Support</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
-            Our proof-of-concept demonstrates that Cashu Signal is technically feasible.
+            Our proof-of-concept demonstrates that Bitcoin in Signal is technically feasible with Cashu.
             If you like this idea as much as we do, show your support and let's spark the imagination of the open-source world.
           </p>
 
