@@ -7,6 +7,7 @@ import { BitcoinCircleIcon as BitcoinCircleIconOutline } from "@bitcoin-design/b
 import React from "react";
 import { TextScramble } from '../components/core/text-scramble';
 import { InlineMath } from 'react-katex';
+import Script from "next/script";
 
 function toggleMenu() {
   let header = document.getElementById('header-container');
@@ -274,17 +275,12 @@ export default function Home() {
         <meta name="twitter:image" content="https://bitcoinforsignal.org/og-image2.jpg?v4" />
         <meta name="twitter:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <link rel="icon" href="/favicon.ico" />
-        
-        {/* Privacy-friendly analytics by Plausible */}
-        <script async src="https://plausible.io/js/pa-zcl1csmZPS1iT1ChWExqe.js"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <Script async src="https://plausible.io/js/pa-zcl1csmZPS1iT1ChWExqe.js"/>
+        <Script dangerouslySetInnerHTML={{__html: `
             window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
             plausible.init()
-          `
-        }} />
+         `}}/>   
       </Head>
-      
       <div id="header-container" className="deactivated transparent">
         <div id="nav-overlay" className="fixed w-full h-full bg-white z-[47] lg:hidden deactivated" onClick={toggleMenu}></div>
 
