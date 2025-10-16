@@ -337,7 +337,7 @@ export default function Home() {
                 <div className="animate-fade-in-up animation-delay-400">
                   <a 
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                      "Private messaging needs private money. #BitcoinforSignal \n\nhttps://bitcoinforsignal.org "
+                      "Private Messaging needs Private Money\n\n#BitcoinforSignal\n\nhttps://bitcoinforsignal.org"
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -570,7 +570,7 @@ export default function Home() {
           <div className="flex justify-center pt-6">
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                "Private messaging needs private money. #BitcoinforSignal \n\nhttps://bitcoinforsignal.org "
+                "Private Messaging needs Private Money\n\n#BitcoinforSignal\n\nhttps://bitcoinforsignal.org"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
