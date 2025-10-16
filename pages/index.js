@@ -639,6 +639,8 @@ export default function Home() {
                 <li>Widespread Bitcoin adoption protects user privacy better than specialized cryptocurrencies</li>
                 <li>Bitcoin brings millions of potential new users, more users means better privacy for everyone</li>
               </ul>
+              <p className="text-signal-text">
+                Get in touch with the Bitcoin for Signal team for feedback and collaboration at <a href="mailto:bitcoinforsignal@proton.me" className="text-signal-blue hover:underline">bitcoinforsignal@proton.me</a>.</p>
             </div>
           </div>
 
