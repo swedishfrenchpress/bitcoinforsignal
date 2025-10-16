@@ -615,7 +615,7 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Signal Users</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Spread the word by sharing this site with your Signal contacts and on Social Media #bitcoinforsignal</li>
-                <li>Engage with Signal by tagging and mention Signal official accounts in relevant posts</li>
+                <li>Express genuine interest in private Bitcoin payments when engaging with Signal</li>
                 <li>Discuss Bitcoin For Signal topic in forums, meetups, and with your friends</li>
               </ul>
             </div>
