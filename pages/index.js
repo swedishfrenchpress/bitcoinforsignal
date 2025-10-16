@@ -14,6 +14,179 @@ function toggleMenu() {
   else header.classList.add('deactivated');
 }
 
+// Shareable assets data structure - Easy to add more designs and platforms!
+// TO ADD MORE DESIGNS: Simply add a new object to this array with your image filenames
+const SHAREABLE_ASSETS = [
+  {
+    id: 'design-1',
+    name: 'Design 1',
+    description: 'Clean and modern design highlighting privacy',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x1.jpg',
+        downloadName: 'bitcoin-for-signal-x.jpg',
+        aspectRatio: 'aspect-[16/9]' // Adjust based on your actual X image dimensions
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig1.jpg',
+        downloadName: 'bitcoin-for-signal-instagram.jpg',
+        aspectRatio: 'aspect-square' // Instagram is typically square
+      }
+    ]
+  },
+  {
+    id: 'design-2',
+    name: 'Design 2',
+    description: 'Bold typography with clear call-to-action',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x2.jpg',
+        downloadName: 'bitcoin-for-signal-x-2.jpg',
+        aspectRatio: 'aspect-[16/9]'
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig2.jpg',
+        downloadName: 'bitcoin-for-signal-instagram-2.jpg',
+        aspectRatio: 'aspect-square'
+      }
+    ]
+  },
+  {
+    id: 'design-3',
+    name: 'Design 3',
+    description: 'Minimalist aesthetic for maximum impact',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x3.jpg',
+        downloadName: 'bitcoin-for-signal-x-3.jpg',
+        aspectRatio: 'aspect-[16/9]'
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig3.jpg',
+        downloadName: 'bitcoin-for-signal-instagram-3.jpg',
+        aspectRatio: 'aspect-square'
+      }
+    ]
+  },
+  {
+    id: 'design-4',
+    name: 'Design 4',
+    description: 'Fresh design for maximum engagement',
+    variants: [
+      {
+        platform: 'X (Twitter)',
+        filename: 'x4.jpg',
+        downloadName: 'bitcoin-for-signal-x-4.jpg',
+        aspectRatio: 'aspect-[16/9]'
+      },
+      {
+        platform: 'Instagram',
+        filename: 'ig4.jpg',
+        downloadName: 'bitcoin-for-signal-instagram-4.jpg',
+        aspectRatio: 'aspect-square'
+      }
+    ]
+  },
+  // ⬇️ EXAMPLE: Uncomment and modify this template to add more designs ⬇️
+  // {
+  //   id: 'design-2',
+  //   name: 'Design 2',
+  //   description: 'Bold typography focused design',
+  //   variants: [
+  //     { 
+  //       platform: 'X (Twitter)', 
+  //       filename: 'x2.jpg', 
+  //       downloadName: 'bitcoin-for-signal-x-2.jpg', 
+  //       aspectRatio: 'aspect-[16/9]' 
+  //     },
+  //     { 
+  //       platform: 'Instagram', 
+  //       filename: 'ig2.jpg', 
+  //       downloadName: 'bitcoin-for-signal-instagram-2.jpg', 
+  //       aspectRatio: 'aspect-square' 
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: 'design-3',
+  //   name: 'Design 3',
+  //   description: 'Minimalist design with bold call-to-action',
+  //   variants: [
+  //     { 
+  //       platform: 'X (Twitter)', 
+  //       filename: 'x3.jpg', 
+  //       downloadName: 'bitcoin-for-signal-x-3.jpg', 
+  //       aspectRatio: 'aspect-[16/9]' 
+  //     },
+  //     { 
+  //       platform: 'Instagram', 
+  //       filename: 'ig3.jpg', 
+  //       downloadName: 'bitcoin-for-signal-instagram-3.jpg', 
+  //       aspectRatio: 'aspect-square' 
+  //     },
+  //     // You can even add more platforms like LinkedIn, Facebook, etc:
+  //     // { 
+  //     //   platform: 'LinkedIn', 
+  //     //   filename: 'linkedin3.jpg', 
+  //     //   downloadName: 'bitcoin-for-signal-linkedin-3.jpg', 
+  //     //   aspectRatio: 'aspect-[1.91/1]' 
+  //     // }
+  //   ]
+  // }
+];
+
+// Reusable component for rendering a downloadable asset
+const DownloadableAsset = ({ filename, downloadName, platform, aspectRatio }) => (
+  <div className="flex flex-col items-center space-y-2">
+    <a
+      href={`/${filename}`}
+      download={downloadName}
+      className="relative group cursor-pointer block w-full"
+    >
+      {/* Image container with elegant hover effect */}
+      <div className="relative overflow-hidden rounded-lg border-2 border-signal-border-weak group-hover:border-signal-blue transition-all duration-500 shadow-sm group-hover:shadow-2xl">
+        <img
+          src={`/${filename}`}
+          alt={`Share on ${platform}`}
+          className="w-full h-auto transition-all duration-500 group-hover:brightness-110"
+        />
+        
+        {/* Subtle overlay on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Download icon overlay - positioned at bottom left */}
+        <div className="absolute bottom-3 left-3 bg-signal-blue text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-lg">
+          {/* SVG download icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.5}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            />
+          </svg>
+        </div>
+      </div>
+    </a>
+    {/* Platform label below the image */}
+    <span className="text-sm font-medium text-signal-text">
+      {platform}
+    </span>
+  </div>
+);
+
 function scrollToSection(e){
   e.preventDefault();
   const href = e.currentTarget && e.currentTarget.getAttribute ? (e.currentTarget.getAttribute('href') || '') : '';
@@ -84,14 +257,18 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta property="og:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
-        <meta property="og:image" content="/og-image2.jpg?v2" />
+        <meta property="og:image" content="https://bitcoinforsignal.org/og-image2.jpg?v3" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bitcoinforsignal" />
+        <meta name="twitter:creator" content="@bitcoinforsignal" />
         <meta name="twitter:title" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <meta name="twitter:description" content="Signal integration for private, peer-to-peer bitcoin payments via Cashu ecash." />
-        <meta name="twitter:image" content="/og-image2.jpg?v2" />
+        <meta name="twitter:image" content="https://bitcoinforsignal.org/og-image2.jpg?v3" />
         <meta name="twitter:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
-        <meta property="og:url" content="https://bitcoinforsignal.com" />
+        <meta property="og:url" content="https://bitcoinforsignal.org" />
         <meta property="og:site_name" content="Bitcoin for Signal" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -119,7 +296,7 @@ export default function Home() {
               <li><a href="#demo" onClick={scrollToSection}>Demo</a></li>
               <li><a href="#privacy" onClick={scrollToSection}>Privacy Deep Dive</a></li>
               <li><a href="#how" onClick={scrollToSection}>How It Works</a></li>
-              <li><a href="#action" onClick={scrollToSection}>Take Action</a></li>
+              <li><a href="#action" onClick={scrollToSection}>Signal Your Support</a></li>
               <li><a href="#faq" onClick={scrollToSection}>FAQ</a></li>
             </ul>
           </nav>
@@ -135,7 +312,7 @@ export default function Home() {
               {/* Title - appears first on both mobile and desktop */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 animate-fade-in-up order-1" style={{ minHeight: '8rem' }}>
                 <TextScramble speed={25} delay={200}>
-                Private Messaging Needs Private Money.
+                Private Messaging Needs Private Money
                 </TextScramble>
               </h1>
 
@@ -152,9 +329,7 @@ export default function Home() {
               <div className="order-3 lg:order-2">
                 <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 max-w-2xl animate-fade-in-up animation-delay-200" style={{ minHeight: '7rem' }}>
                   <TextScramble speed={30} delay={600}>
-                    We love Signal. That's why we've integrated Cashu
-                    to enable truly private Bitcoin micropayments
-                    inside the world's most trusted encrypted messenger.
+                  Bitcoin belongs in Signal. Cashu ecash enables truly private bitcoin payments inside the world's most trusted encrypted messenger.
                   </TextScramble>
                 </h3>
 
@@ -162,15 +337,13 @@ export default function Home() {
                 <div className="animate-fade-in-up animation-delay-400">
                   <a 
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                      "Signal protects your messages. Bitcoin protects your money.\n\n" +
-                      "Time to bring them together. @Signalapp #BitcoinForSignal 🔒₿\n\n" +
-                      "https://bitcoinforsignal.com/"
+                      "Private Messaging needs Private Money\n\n#BitcoinforSignal\n\nhttps://bitcoinforsignal.org"
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <div className="bg-white px-6 py-3 text-lg text-signal-blue hover:bg-signal-blue hover:text-white transition rounded-md font-medium inline-block">
-                      Signal your support on X
+                      Share This On X
                     </div>
                   </a>
                 </div>
@@ -200,15 +373,15 @@ export default function Home() {
               </div>
 
               <h3>
-                Payments Belong in Signal.
+                Payments Belong in Signal
               </h3>
 
               <p>
               Signal enables private communication for everyone. By protecting our freedom of speech as the world's most trusted messenger, Signal is the natural place for privacy-preserving commerce that can protect our freedom to transact with each other.
               </p>
 
-              <p>Signal aimed to solve this problem by integrating MobileCoin, a speculative cryptocurrency that has failed to gain meaningful adoption. Today, most Signal users aren't aware that this feature exists.</p>
-
+              <p>Signal aimed to solve this problem by integrating MobileCoin, a speculative cryptocurrency that has failed to gain meaningful adoption. Today, most Signal users aren't aware that this feature exists.
+              </p>
             </div>
 
             {/* Image appears beside content on desktop with proper spacing */}
@@ -226,14 +399,14 @@ export default function Home() {
                 <img src="/signal-hidden.jpg" alt="Cashu x Signal integration" className="w-full max-w-sm object-contain" />
               </div>
 
-              <h3>Bitcoin Is the Answer.</h3>
+              <h3>Bitcoin + Cashu = Private Payments</h3>
 
               <p>
               We love Signal and want to bring the best payment experience to the best private messenger in the world. As the most widely adopted cryptocurrency, Bitcoin is ideal as the backbone for the new global economy.
               </p>
 
               <p>
-              Using the Cashu protocol, a Chaumian ecash system that provides strong privacy, Signal users can send and receive Bitcoin micropayments. Instant peer-to-peer payments natively within the Signal app.
+              Using the Cashu protocol, a Chaumian ecash system that provides strong privacy, Signal users can send and receive Bitcoin micropayments. Private messages meet private money.
               </p>
             </div>
 
@@ -264,7 +437,7 @@ export default function Home() {
               
               <div className="flex flex-col items-center space-y-4">
                 <img 
-                  src="/signal-wide.png" 
+                  src="/signal-wide.jpg" 
                   alt="Signal chat with Cashu payment interface" 
                   className="w-full max-w-4xl h-auto"
                 />
@@ -331,7 +504,7 @@ export default function Home() {
 
               <p>
                 <strong>The Signal Cashu integration</strong> embeds a lightweight
-                Cashu wallet directly into Signal using the <a href="https://github.com/cashubtc/cdk">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
+                Cashu wallet directly into Signal using the <a href="https://cashudevkit.org/" target="_blank" rel="noopener noreferrer">Cashu Development Kit</a>. Building with Cashu is as simple as it gets so we added Cashu to Signal for iOS and Android. The result is a beautiful and intuitive user experience.
               </p>
 
               <p>
@@ -345,7 +518,7 @@ export default function Home() {
               </p>
 
               <p>
-                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/">developer libraries</a> to chose from.
+                <strong>The Cashu protocol</strong> is open and not controlled by a single entity. It is defined in the Cashu <a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer">protocol specifications</a>. This means that any individual or organization can run a mint or create a wallet. Cashu has a vibrant <a href="https://github.com/cashubtc/awesome-cashu" target="_blank" rel="noopener noreferrer">open-source ecosystem</a> with many wallet and mint implementations and <a href="https://docs.cashu.space/libraries" target="_blank" rel="noopener noreferrer">developer libraries</a> to chose from.
               </p>
 
             </div>
@@ -360,25 +533,25 @@ export default function Home() {
                   <div>
                     <h5 className="font-semibold text-signal-text-strong mb-2 text-signal-blue">Mandatory</h5>
                     <ul className="text-sm text-signal-text space-y-1 ml-4">
-                      <li>• <a href="https://cashubtc.github.io/nuts/00/" className="text-blue-600 hover:underline font-medium">NUT-00: Cryptography</a> - Cryptographic primitives</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/03/" className="text-blue-600 hover:underline font-medium">NUT-03: Swapping Tokens</a> - Double spend protection</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/04/" className="text-blue-600 hover:underline font-medium">NUT-04: Minting</a> - Token issuance</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/00/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-00: Cryptography</a> - Cryptographic primitives</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/03/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-03: Swapping Tokens</a> - Double spend protection</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/04/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-04: Minting</a> - Token issuance</li>
                     </ul>
                   </div>
                   
                   <div>
                     <h5 className="font-semibold text-signal-text-strong mb-2 text-orange-600">Optional</h5>
                     <ul className="text-sm text-signal-text space-y-1 ml-4">
-                      <li>• <a href="https://cashubtc.github.io/nuts/11/" className="text-blue-600 hover:underline font-medium">NUT-11: Pay to Public Key</a> - Programmable payments</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/12/" className="text-blue-600 hover:underline font-medium">NUT-12: DLEQ Proofs</a> - Discrete Log Equality proofs</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/16/" className="text-blue-600 hover:underline font-medium">NUT-16: Animated QR Codes</a> - Dynamic QR codes</li>
-                      <li>• <a href="https://cashubtc.github.io/nuts/22/" className="text-blue-600 hover:underline font-medium">NUT-22: Blind Authentication</a> - Privacy-preserving authentication</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/11/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-11: Pay to Public Key</a> - Programmable payments</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/12/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-12: DLEQ Proofs</a> - Discrete Log Equality proofs</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/16/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-16: Animated QR Codes</a> - Dynamic QR codes</li>
+                      <li>• <a href="https://cashubtc.github.io/nuts/22/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">NUT-22: Blind Authentication</a> - Privacy-preserving authentication</li>
                     </ul>
                   </div>
                 </div>
                 
                 <p className="text-xs text-signal-text-weak mt-4">
-                  Complete specifications and implementation details available in the <a href="https://github.com/cashubtc/nuts" className="text-blue-600 hover:underline">Cashu NUTs repository</a>.
+                  Complete specifications and implementation details available in the <a href="https://github.com/cashubtc/nuts" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Cashu NUTs repository</a>.
                 </p>
               </div>
             </div>
@@ -386,7 +559,7 @@ export default function Home() {
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
-          <h2 className="text-signal-blue" id="action">Signal Support</h2>
+          <h2 className="text-signal-blue" id="action">Signal Your Support</h2>
 
           <p className="max-w-screen-sm md:text-center text-xl">
             Our proof-of-concept demonstrates that Bitcoin in Signal is technically feasible with Cashu.
@@ -397,24 +570,53 @@ export default function Home() {
           <div className="flex justify-center pt-6">
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                "Private messaging needs private money. @Signalapp should integrate Bitcoin payments using Cashu ecash for maximum privacy. Check out this proof-of-concept: https://bitcoinforsignal.org #BitcoinForSignal #Signal #Cashu"
+                "Private Messaging needs Private Money\n\n#BitcoinforSignal\n\nhttps://bitcoinforsignal.org"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="bg-signal-blue px-8 py-4 text-lg text-white hover:bg-blue-700 transition rounded-md font-medium inline-block">
-                Signal your support on X
+                Share This On X
               </div>
             </a>
+          </div>
+
+          {/* Shareable Assets Section - Dynamically rendered from SHAREABLE_ASSETS data */}
+          <div className="max-w-screen-xl pt-8 w-full px-4">
+            <h3 className="text-2xl font-semibold text-signal-text-strong mb-6 text-center">
+            Show Your Love For Bitcoin In Signal 
+            </h3>
+            {/* Horizontal grid of design cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {SHAREABLE_ASSETS.map((design) => (
+                <div 
+                  key={design.id} 
+                  className="bg-white border border-signal-border-weak rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  {/* Platform variants stacked vertically within this design card */}
+                  <div className="space-y-4">
+                    {design.variants.map((variant, idx) => (
+                      <DownloadableAsset
+                        key={`${design.id}-${idx}`}
+                        filename={variant.filename}
+                        downloadName={variant.downloadName}
+                        platform={variant.platform}
+                        aspectRatio={variant.aspectRatio}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="max-w-screen-lg pt-8 space-y-6">
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Signal Users</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Share this site with your Signal contacts and on social media</li>
-                <li>Contact Signal support and express your interest in bitcoin payments</li>
-                <li>Advocate for privacy-preserving bitcoin integration in Signal forums</li>
+                <li>Spread the word by sharing this site with your Signal contacts and on Social Media #bitcoinforsignal</li>
+                <li>Express genuine interest in private Bitcoin payments when engaging with Signal</li>
+                <li>Discuss Bitcoin For Signal topic in forums, meetups, and with your friends</li>
               </ul>
             </div>
 
@@ -422,23 +624,23 @@ export default function Home() {
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Developers</h3>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
                 <li>Review the Signal + Cashu proof-of-concept code</li>
-                <li>Help refine the UX and security model</li>
                 <li>Build complementary tools (mint infrastructure, testing tools, etc.)</li>
-                <li>Learn about <a href="https://cashu.space">Cashu</a> and contribute to the broader ecosystem</li>
+                <li>Learn about <a href="https://cashu.space" target="_blank" rel="noopener noreferrer">Cashu</a> and join the <a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer">discussion</a>.</li>
               </ul>
             </div>
 
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
               <h3 className="text-2xl font-semibold text-signal-text-strong">For Decision Makers at Signal</h3>
               <p className="text-signal-text">
-                We believe Cashu ecash aligns perfectly with Signal's mission. This integration would:
+              Cashu naturally aligns with Signal's privacy first mission.
               </p>
               <ul className="list-disc ml-6 space-y-2 text-signal-text">
-                <li>Replace the underutilized MobileCoin integration with the world's most liquid cryptocurrency</li>
-                <li>Maintain Signal's uncompromising privacy standards through Chaumian blind signatures</li>
-                <li>Attract millions of bitcoin users who share Signal's values around privacy and freedom</li>
-                <li>Position Signal as the premier private communication and payment platform</li>
+                <li>Encrypted messages deserve encrypted money, Cashu enables truly anonymous Bitcoin payments</li>
+                <li>Widespread Bitcoin adoption protects user privacy better than specialized cryptocurrencies</li>
+                <li>Bitcoin brings millions of potential new users, more users means better privacy for everyone</li>
               </ul>
+              <p className="text-signal-text">
+                Get in touch with the Bitcoin for Signal team for feedback and collaboration at <a href="mailto:bitcoinforsignal@proton.me" className="text-signal-blue hover:underline">bitcoinforsignal@proton.me</a>.</p>
             </div>
           </div>
 
@@ -459,7 +661,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">iOS Source Code</div>
-                  <div className="text-sm text-gray-500">Signal fork with Cashu</div>
                 </div>
               </a>
 
@@ -477,7 +678,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">Android Source Code</div>
-                  <div className="text-sm text-gray-500">Signal fork with Cashu</div>
                 </div>
               </a>
 
@@ -495,13 +695,12 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">Cashu Official Website</div>
-                  <div className="text-sm text-gray-500">Learn about the protocol</div>
                 </div>
               </a>
 
-              {/* GitHub Documentation */}
+              {/* Cashu Documentation */}
               <a 
-                href="https://github.com/cashubtc" 
+                href="https://docs.cashu.space/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 hover:border-gray-300 transition-all duration-200 flex flex-col items-center space-y-3 group"
@@ -513,7 +712,6 @@ export default function Home() {
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-gray-900 group-hover:text-gray-700">Cashu Documentation</div>
-                  <div className="text-sm text-gray-500">Technical specifications</div>
                 </div>
               </a>
 
@@ -534,7 +732,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3>How is this Cashu different from MobileCoin?</h3>
+                <h3>How is Cashu different from MobileCoin?</h3>
                 <p>
                   Cashu is a purely open-source project with no commercial interests. It is not a speculative cryptocurrency but a protocol that works with any asset. Bitcoin is internet's native digital currency with the largest user base across the world. Cashu brings strong privacy to bitcoin, making it a pragmatic solution that Signal can build on.
                 </p>
@@ -544,10 +742,9 @@ export default function Home() {
               <div>
                 <h3>Will Signal actually do this?</h3>
                 <p>
-                  Our goal is not to build pressure on Signal but to imagine a better world together with them.
-                  We love and trust Signal. This site and the proof-of-concept are tools to spark their imagination
+                  We love and trust Signal and want to imagine a better world together with them. This site and the proof-of-concept are tools to spark their imagination
                   and to show Signal that there's real interest for global micropayments within their ecosystem.
-                  We would love it Signal considered integrating Cashu or a similar bitcoin privacy solution.
+                  Together with Signal, we would love to start a discussion about integrating Cashu or a similar bitcoin privacy solution.
                 </p>
               </div>
 
@@ -557,7 +754,6 @@ export default function Home() {
                   Share this site, try the proof-of-concept fork.
                   The best support you can give is to use privacy-preserving technologies and to share it with your friends. 
                   If you're a developer, check out the Cashu protocol, consider integrating it with your app, or contribute to the Cashu code or the broader Cashu ecosystem directly.
-                  To support the open-source developers working on Cashu, consider supporting our non-profit <a href="https://opencash.dev/">OpenCash</a>. 
                 </p>
               </div>
             </div>
@@ -580,7 +776,7 @@ export default function Home() {
                 "Signal", Signal logos, and other trademarks are trademarks or registered trademarks of Signal Technology Foundation.
               </p>
               <p className="text-sm text-[#E9E9E9]">
-                For media inquiries about this campaign, contact us at <a href="mailto:bitcoinforsignal@proton.me" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>bitcoinforsignal@proton.me</a>.
+                For media inquiries about this campaign, contact us at <a href="mailto:bitcoinforsignal@proton.me" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>bitcoinforsignal@proton.me</a>.
               </p>
               
               {/* Bitcoin Design Community Credit */}
@@ -609,7 +805,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><a href="https://cashu.space" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Official Website</a></li>
                 <li><a href="https://github.com/cashubtc" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu GitHub</a></li>
-                <li><a href="https://cashubtc.github.io/nuts" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Documentation</a></li>
+                <li><a href="https://docs.cashu.space/" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Documentation</a></li>
                 <li><a href="https://t.me/CashuBTC" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu Telegram</a></li>
                 <li><a href="https://x.com/CashuBTC" target="_blank" rel="noopener noreferrer" className="text-[#E9E9E9] hover:text-white hover:underline transition" style={{fontWeight: 500}}>Cashu on X</a></li>
               </ul>
