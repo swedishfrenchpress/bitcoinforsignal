@@ -274,6 +274,15 @@ export default function Home() {
         <meta name="twitter:image" content="https://bitcoinforsignal.org/og-image2.jpg?v4" />
         <meta name="twitter:image:alt" content="Bitcoin for Signal - Private Messaging Needs Private Money." />
         <link rel="icon" href="/favicon.ico" />
+        
+        {/* Privacy-friendly analytics by Plausible */}
+        <script async src="https://plausible.io/js/pa-zcl1csmZPS1iT1ChWExqe.js"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+            plausible.init()
+          `
+        }} />
       </Head>
       
       <div id="header-container" className="deactivated transparent">
