@@ -377,7 +377,7 @@ export default function Home() {
               </h3>
 
               <p>
-              Signal enables private communication for everyone, but the moment we leave Signal to make a payment, our interactions become traceable. Creating a privacy gap between our messages and our money.
+              Signal enables private communication for everyone, but the moment we leave Signal to make a payment, our interactions become traceable—creating a privacy gap between our messages and our money.
               </p>
 
               <p>Signal integrated MobileCoin to solve this, but most Signal users don't even know this feature exists. And for those who do, there's another problem: a payment system that's only used within Signal reveals you're a Signal user.
