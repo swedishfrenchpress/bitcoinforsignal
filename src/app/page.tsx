@@ -506,7 +506,7 @@ export default function Home() {
             </div>
           </div>
 
-          <section>
+          <section className="!gap-6">
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
               <h2 className="!text-signal-blue" id="privacy">
                 Privacy Deep Dive
@@ -545,16 +545,16 @@ export default function Home() {
                 should be too.
               </p>
             </div>
-            <div className="basis-6/12 flex justify-center p-6">
+            <div className="basis-6/12 flex justify-center">
               <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
-                <h4 className="font-semibold text-signal-text-strong mb-3">
+                <h4 className="font-semibold !text-signal-text-strong mb-3">
                   The Math Behind the Privacy
                 </h4>
-                <p className="text-sm text-signal-text mb-3">
+                <p className="text-sm !text-signal-text mb-3">
                   Cashu uses a Blind Diffie-Hellmann Key Exchange (BDHKE) to
                   achieve unlinkability:
                 </p>
-                <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded">
+                <div className="text-sm !text-signal-text space-y-2 font-mono bg-white p-4 rounded">
                   <div>
                     1. Mint{" "}
                     <code className="bg-gray-100 px-1 rounded">Bob</code>{" "}
@@ -633,7 +633,7 @@ export default function Home() {
                     , and if so treats it as a valid spend.
                   </div>
                 </div>
-                <p className="text-xs text-signal-text-weak mt-3">
+                <p className="text-xs !text-signal-text-weak mt-3">
                   Where all upper-case symbols are elliptic curve points and{" "}
                   <InlineMath math={"G"} /> is the generator point,{" "}
                   <InlineMath math={"k"} /> is the mint&apos;s private key, and{" "}
@@ -644,7 +644,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section>
+          <section className="!gap-6">
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
               <h2 className="!text-signal-blue" id="how">
                 How It Works
@@ -715,12 +715,12 @@ export default function Home() {
                 to chose from.
               </p>
             </div>
-            <div className="basis-6/12 flex justify-center p-6">
+            <div className="basis-6/12 flex justify-center">
               <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md w-full max-w-md">
-                <h4 className="font-semibold text-signal-text-strong mb-3">
+                <h4 className="font-semibold !text-signal-text-strong mb-3">
                   Protocol Specifications
                 </h4>
-                <p className="text-sm text-signal-text mb-4">
+                <p className="text-sm !text-signal-text mb-4">
                   The Cashu protocol is defined by a set of open specifications
                   called NUTs (Notation, Usage, and Terminology):
                 </p>
@@ -730,7 +730,7 @@ export default function Home() {
                     <h5 className="font-semibold text-signal-text-strong mb-2 text-signal-blue">
                       Mandatory
                     </h5>
-                    <ul className="text-sm text-signal-text space-y-1 ml-4">
+                    <ul className="text-sm !text-signal-text space-y-1 ml-4">
                       <li>
                         •{" "}
                         <a
@@ -771,10 +771,10 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <h5 className="font-semibold text-signal-text-strong mb-2 text-orange-600">
+                    <h5 className="font-semibold !text-signal-text-strong mb-2 text-orange-600">
                       Optional
                     </h5>
-                    <ul className="text-sm text-signal-text space-y-1 ml-4">
+                    <ul className="text-sm !text-signal-text space-y-1 ml-4">
                       <li>
                         •{" "}
                         <a
@@ -827,7 +827,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <p className="text-xs text-signal-text-weak mt-4">
+                <p className="text-xs !text-signal-text-weak mt-4">
                   Complete specifications and implementation details available
                   in the{" "}
                   <a
@@ -874,7 +874,7 @@ export default function Home() {
 
           {/* Shareable Assets Section - Dynamically rendered from SHAREABLE_ASSETS data */}
           <div className="max-w-screen-xl pt-8 w-full px-4">
-            <h3 className="text-2xl font-semibold text-signal-text-strong mb-6 text-center">
+            <h3 className="text-2xl font-semibold !text-signal-text-strong mb-6 text-center">
               Show Your Love For Bitcoin In Signal
             </h3>
             {/* Horizontal grid of design cards */}
@@ -903,10 +903,10 @@ export default function Home() {
 
           <div className="max-w-screen-lg pt-8 space-y-6">
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
-              <h3 className="text-2xl font-semibold text-signal-text-strong">
+              <h3 className="text-2xl font-semibold !text-signal-text-strong">
                 For Signal Users
               </h3>
-              <ul className="list-disc ml-6 space-y-2 text-signal-text">
+              <ul className="list-disc ml-6 space-y-2 !text-signal-text">
                 <li>
                   Spread the word by sharing this site with your Signal contacts
                   and on Social Media #bitcoinforsignal
@@ -923,10 +923,10 @@ export default function Home() {
             </div>
 
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
-              <h3 className="text-2xl font-semibold text-signal-text-strong">
+              <h3 className="text-2xl font-semibold !text-signal-text-strong">
                 For Developers
               </h3>
-              <ul className="list-disc ml-6 space-y-2 text-signal-text">
+              <ul className="list-disc ml-6 space-y-2 !text-signal-text">
                 <li>Review the Signal + Cashu proof-of-concept code</li>
                 <li>
                   Build complementary tools (mint infrastructure, testing tools,
@@ -955,13 +955,13 @@ export default function Home() {
             </div>
 
             <div className="bg-white border border-signal-border-weak p-8 rounded-md shadow-sm space-y-4 transition-shadow duration-300 hover:shadow-md">
-              <h3 className="text-2xl font-semibold text-signal-text-strong">
+              <h3 className="text-2xl font-semibold !text-signal-text-strong">
                 For Decision Makers at Signal
               </h3>
-              <p className="text-signal-text">
+              <p className="!text-signal-text">
                 Cashu naturally aligns with Signal&apos;s privacy first mission.
               </p>
-              <ul className="list-disc ml-6 space-y-2 text-signal-text">
+              <ul className="list-disc ml-6 space-y-2 !text-signal-text">
                 <li>
                   Encrypted messages deserve encrypted money, Cashu enables
                   truly anonymous Bitcoin payments
@@ -975,12 +975,12 @@ export default function Home() {
                   means better privacy for everyone
                 </li>
               </ul>
-              <p className="text-signal-text">
+              <p className="!text-signal-text">
                 Get in touch with the Bitcoin for Signal team for feedback and
                 collaboration at{" "}
                 <a
                   href="mailto:bitcoinforsignal@proton.me"
-                  className="text-signal-blue hover:underline"
+                  className="!text-signal-blue hover:underline"
                 >
                   bitcoinforsignal@proton.me
                 </a>
