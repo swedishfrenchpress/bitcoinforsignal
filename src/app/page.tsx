@@ -330,9 +330,11 @@ export default function Home() {
 
               {/* Image - appears second on mobile (order-2), but moves to right side on desktop (lg:order-3) */}
               <div className="flex-1 flex justify-center mb-8 lg:hidden animate-fade-in-up animation-delay-400 order-2">
-                <img
+                <Image
                   src="/signal-hero2.png"
                   alt="Signal app interface"
+                  width={500}
+                  height={1000}
                   className="w-full max-w-md"
                 />
               </div>
@@ -369,9 +371,11 @@ export default function Home() {
 
             {/* Right side - Image (desktop only) */}
             <div className="hidden lg:flex flex-1 justify-center lg:justify-end animate-fade-in-up animation-delay-400">
-              <img
+              <Image
                 src="/signal-hero2.png"
                 alt="Signal app interface"
+                width={500}
+                height={1000}
                 className="w-full max-w-md lg:max-w-lg xl:max-w-xl"
               />
             </div>
@@ -1188,9 +1192,11 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 !text-[#E9E9E9] hover:text-white transition group"
                 >
-                  <img
+                  <Image
                     src="/bdc-logo.svg"
                     alt="Bitcoin Design Community"
+                    width={24}
+                    height={24}
                     className="h-6 w-6"
                   />
                   <span
