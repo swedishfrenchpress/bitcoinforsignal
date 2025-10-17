@@ -381,7 +381,7 @@ export default function Home() {
         <div className="container mx-auto px-12 max-w-screen-xl">
           <section className="flex flex-col md:flex-row md:gap-4 md:pt-12 md:pb-12">
             <div className="w-full md:basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-signal-blue" id="problem">
+              <h2 className="!text-signal-blue" id="problem">
                 The Problem
               </h2>
 
@@ -424,7 +424,7 @@ export default function Home() {
 
           <section className="flex flex-col md:flex-row md:gap-4 md:pt-12 md:pb-12">
             <div className="w-full md:basis-6/12 space-y-4 flex justify-center flex-col">
-              <h2 className="text-signal-blue" id="solution">
+              <h2 className="!text-signal-blue" id="solution">
                 The Solution
               </h2>
 
@@ -464,7 +464,7 @@ export default function Home() {
           </section>
 
           <div className="pt-12 pb-12 text-center space-y-8">
-            <h2 className="text-signal-blue" id="demo">
+            <h2 className="!text-signal-blue" id="demo">
               See It In Action
             </h2>
 
@@ -504,7 +504,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
-              <h2 className="text-signal-blue" id="privacy">
+              <h2 className="!text-signal-blue" id="privacy">
                 Privacy Deep Dive
               </h2>
 
@@ -550,7 +550,7 @@ export default function Home() {
                   Cashu uses a Blind Diffie-Hellmann Key Exchange (BDHKE) to
                   achieve unlinkability:
                 </p>
-                <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded border">
+                <div className="text-sm text-signal-text space-y-2 font-mono bg-white p-4 rounded">
                   <div>
                     1. Mint{" "}
                     <code className="bg-gray-100 px-1 rounded">Bob</code>{" "}
@@ -642,7 +642,7 @@ export default function Home() {
 
           <section>
             <div className="basis-6/12 space-y-4 flex flex-col justify-center">
-              <h2 className="text-signal-blue" id="how">
+              <h2 className="!text-signal-blue" id="how">
                 How It Works
               </h2>
 
@@ -842,7 +842,7 @@ export default function Home() {
         </div>
 
         <div className="md:p-12 flex flex-col md:items-center space-y-8 p-4 mx-auto mb-8">
-          <h2 className="text-signal-blue" id="action">
+          <h2 className="!text-signal-blue" id="action">
             Signal Your Support
           </h2>
 
@@ -1090,7 +1090,7 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-12 max-w-screen-xl pb-24">
-          <h2 className="text-signal-blue mb-4" id="faq">
+          <h2 className="!text-signal-blue mb-4" id="faq">
             FAQ
           </h2>
           <div className="flex flex-col md:flex-row m-0 gap-8 md:gap-16">
