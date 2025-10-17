@@ -1152,27 +1152,27 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#3C3744] text-[#E9E9E9] py-12 px-6">
+      <footer className="bg-[#3C3744] !text-[#E9E9E9] py-12 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Left Section - Copyright and Info */}
             <div className="lg:col-span-2 space-y-4">
-              <p className="text-sm text-[#E9E9E9]">
+              <p className="text-sm !text-[#E9E9E9]">
                 This is a grassroots advocacy campaign, not an official Signal
                 or Cashu project.
               </p>
-              <p className="text-sm text-[#E9E9E9]">
+              <p className="text-sm !text-[#E9E9E9]">
                 &quot;Signal&quot;, Signal logos, and other trademarks are
                 trademarks or registered trademarks of Signal Technology
                 Foundation.
               </p>
-              <p className="text-sm text-[#E9E9E9]">
+              <p className="text-sm !text-[#E9E9E9]">
                 For media inquiries about this campaign, contact us at{" "}
                 <a
                   href="mailto:bitcoinforsignal@proton.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#E9E9E9] hover:text-white hover:underline transition"
+                  className="!text-[#E9E9E9] hover:text-white hover:underline transition"
                   style={{ fontWeight: 500 }}
                 >
                   bitcoinforsignal@proton.me
@@ -1186,7 +1186,7 @@ export default function Home() {
                   href="https://bitcoin.design"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-[#E9E9E9] hover:text-white transition group"
+                  className="flex items-center space-x-2 !text-[#E9E9E9] hover:text-white transition group"
                 >
                   <img
                     src="/bdc-logo.svg"
@@ -1206,7 +1206,7 @@ export default function Home() {
             {/* Cashu Resources Column */}
             <div className="space-y-3">
               <h4
-                className="block font-semibold text-[#E9E9E9] mb-3"
+                className="block font-semibold !text-[#E9E9E9] mb-3"
                 style={{
                   fontWeight: 600,
                   marginBottom: "12px",
@@ -1221,7 +1221,7 @@ export default function Home() {
                     href="https://cashu.space"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#E9E9E9] hover:text-white hover:underline transition"
+                    className="!text-[#E9E9E9] hover:text-white hover:underline transition"
                     style={{ fontWeight: 500 }}
                   >
                     Cashu Official Website
@@ -1232,7 +1232,7 @@ export default function Home() {
                     href="https://github.com/cashubtc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#E9E9E9] hover:text-white hover:underline transition"
+                    className="!text-[#E9E9E9] hover:text-white hover:underline transition"
                     style={{ fontWeight: 500 }}
                   >
                     Cashu GitHub
@@ -1243,7 +1243,7 @@ export default function Home() {
                     href="https://docs.cashu.space/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#E9E9E9] hover:text-white hover:underline transition"
+                    className="!text-[#E9E9E9] hover:text-white hover:underline transition"
                     style={{ fontWeight: 500 }}
                   >
                     Cashu Documentation
@@ -1254,7 +1254,7 @@ export default function Home() {
                     href="https://t.me/CashuBTC"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#E9E9E9] hover:text-white hover:underline transition"
+                    className="!text-[#E9E9E9] hover:text-white hover:underline transition"
                     style={{ fontWeight: 500 }}
                   >
                     Cashu Telegram
@@ -1265,7 +1265,7 @@ export default function Home() {
                     href="https://x.com/CashuBTC"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#E9E9E9] hover:text-white hover:underline transition"
+                    className="!text-[#E9E9E9] hover:text-white hover:underline transition"
                     style={{ fontWeight: 500 }}
                   >
                     Cashu on X
