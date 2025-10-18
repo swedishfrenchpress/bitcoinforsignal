@@ -16,6 +16,9 @@ ENV NODE_ENV="production"
 # Throw-away build stage to reduce size of final image
 FROM base AS build
 
+# Disable Next.js telemetry during build
+ENV NEXT_TELEMETRY_DISABLED=1
+
 # Install packages needed to build node modules
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
@@ -45,6 +48,9 @@ COPY --from=build /app/public /app/public
 # Set hostname to bind to all interfaces
 ENV HOSTNAME="0.0.0.0"
 ENV PORT=3000
+
+# Disable Next.js telemetry at runtime
+ENV NEXT_TELEMETRY_DISABLED=1
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
