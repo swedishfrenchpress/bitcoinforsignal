@@ -310,6 +310,14 @@ section {
 }
 
 @media (max-width: 1023px) {
+  #header-container.deactivated header {
+    pointer-events: none;
+  }
+
+  #header-container.deactivated .controls {
+    pointer-events: auto;
+  }
+
   #header-container.transparent.deactivated {
     background-color: transparent;
   }
