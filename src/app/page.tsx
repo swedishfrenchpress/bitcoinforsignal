@@ -6,6 +6,7 @@ import Link from "next/link";
 import { TextScramble } from "../components/core/text-scramble";
 import { InlineMath } from "react-katex";
 import Image from "next/image";
+import { FeaturedTweets } from "../components/featured-tweets";
 
 function toggleMenu() {
   const header = document.getElementById("header-container");
@@ -466,6 +467,9 @@ export default function Home() {
               />
             </div>
           </section>
+
+          {/* Community Support Section */}
+          <FeaturedTweets />
 
           <div className="pt-12 pb-12 text-center space-y-8">
             <h2 className="!text-signal-blue" id="demo">
