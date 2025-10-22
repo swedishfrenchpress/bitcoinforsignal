@@ -23,32 +23,28 @@ const PRESS_COVERAGE = [
     title: "Bitcoiners voice support for Signal adopting Bitcoin",
     source: "Cointelegraph",
     url: "https://cointelegraph.com/news/bitcoiners-voice-support-signal-adopting-bitcoin",
-    imageUrl: "/press-cointelegraph.jpg",
-    date: "October 2024"
+    imageUrl: "/press-cointelegraph.jpg"
   },
   {
     id: "blocktrainer",
     title: "Bitcoin for Signal – Cashu ermöglicht anonyme BTC-Zahlungen in der Messenger-App",
     source: "Blocktrainer",
     url: "https://www.blocktrainer.de/blog/bitcoin-for-signal-cashu-ermoeglicht-anonyme-btc-zahlungen-in-der-messenger-app",
-    imageUrl: "/press-blocktrainer.jpg",
-    date: "October 2024"
+    imageUrl: "/press-blocktrainer.jpg"
   },
   {
     id: "yahoo",
     title: "Jack Dorsey wants WhatsApp rival to use Bitcoin",
     source: "Yahoo Finance",
     url: "https://finance.yahoo.com/news/jack-dorsey-wants-whatsapp-rival-003149326.html",
-    imageUrl: "/press-yahoo.jpg",
-    date: "October 2024"
+    imageUrl: "/press-yahoo.jpg"
   },
   {
     id: "fountain",
     title: "Sondermünze: Bitcoin for Signal",
     source: "Münzweg Podcast",
     url: "https://fountain.fm/episode/Rgr8bodF4INXipOxoFDD",
-    imageUrl: "/press-fountain.jpg",
-    date: "October 2024"
+    imageUrl: "/press-fountain.jpg"
   }
 ];
 
@@ -193,24 +189,36 @@ const DownloadableAsset = ({
 const PressCoverageCarousel = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = React.useState(true);
+  const [isTransitioning, setIsTransitioning] = React.useState(true);
+
+  // Create duplicated slides for seamless infinite loop
+  const duplicatedSlides = [...PRESS_COVERAGE, ...PRESS_COVERAGE];
 
   // Auto-scroll functionality
   React.useEffect(() => {
     if (!isAutoPlaying) return;
     
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === PRESS_COVERAGE.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // Change slide every 4 seconds
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }, 6000); // Change slide every 6 seconds (slower)
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
+  // Handle infinite loop reset
+  React.useEffect(() => {
+    if (currentIndex >= PRESS_COVERAGE.length) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+        setTimeout(() => setIsTransitioning(true), 50);
+      }, 1000); // Wait for transition to complete
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex]);
+
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === PRESS_COVERAGE.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => prevIndex + 1);
   };
 
   const prevSlide = () => {
@@ -224,19 +232,19 @@ const PressCoverageCarousel = () => {
       {/* Carousel container */}
       <div className="relative overflow-hidden rounded-lg">
         <div 
-          className="flex transition-transform duration-500 ease-in-out"
+          className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {PRESS_COVERAGE.map((article) => (
-            <div key={article.id} className="w-full flex-shrink-0">
+          {duplicatedSlides.map((article, index) => (
+            <div key={`${article.id}-${index}`} className="w-full flex-shrink-0">
               <a
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
               >
-                <div className="bg-signal-bg border border-signal-border-weak p-4 rounded-md hover:shadow-md transition-shadow duration-300">
-                  <div className="flex flex-col md:flex-row gap-4">
+                <div className="bg-signal-bg border border-signal-border-weak p-4 rounded-md hover:shadow-md transition-shadow duration-300 h-[380px] md:h-[200px]">
+                  <div className="flex flex-col md:flex-row gap-4 h-full md:items-center">
                     {/* Article image */}
                     <div className="md:w-2/5">
                       <div className="relative w-full h-48 md:h-36 rounded-md overflow-hidden bg-gray-100">
@@ -253,16 +261,10 @@ const PressCoverageCarousel = () => {
                     </div>
                     
                     {/* Article content */}
-                    <div className="md:w-3/5 flex flex-col justify-center">
+                    <div className="md:w-3/5 flex flex-col justify-center h-full">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-sm font-medium text-signal-blue">
                           {article.source}
-                        </span>
-                        <span className="text-sm text-signal-text-weak">
-                          •
-                        </span>
-                        <span className="text-sm text-signal-text-weak">
-                          {article.date}
                         </span>
                       </div>
                       <h4 className="press-title font-semibold text-signal-text-strong mb-2">
@@ -330,7 +332,7 @@ const PressCoverageCarousel = () => {
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
             className={`w-2 h-2 rounded-full transition-all duration-200 ${
-              index === currentIndex 
+              index === (currentIndex % PRESS_COVERAGE.length)
                 ? 'bg-signal-blue w-6' 
                 : 'bg-signal-border hover:bg-signal-text-weak'
             }`}
