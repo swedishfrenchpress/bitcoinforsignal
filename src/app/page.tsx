@@ -271,7 +271,7 @@ const PressCoverageCarousel = () => {
                         {article.title}
                       </h4>
                       <div className="flex items-center text-signal-blue text-sm font-medium">
-                        Read Article
+                        {article.id === "fountain" ? "Listen to Podcast" : "Read Article"}
                         <svg
                           className="w-4 h-4 ml-1"
                           fill="none"
