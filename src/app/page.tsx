@@ -220,7 +220,7 @@ const PressCoverageCarousel = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
       {/* Carousel container */}
       <div className="relative overflow-hidden rounded-lg">
         <div 
@@ -235,11 +235,11 @@ const PressCoverageCarousel = () => {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <div className="bg-signal-bg border border-signal-border-weak p-6 rounded-md hover:shadow-md transition-shadow duration-300">
-                  <div className="flex flex-col md:flex-row gap-6">
+                <div className="bg-signal-bg border border-signal-border-weak p-4 rounded-md hover:shadow-md transition-shadow duration-300">
+                  <div className="flex flex-col md:flex-row gap-4">
                     {/* Article image */}
-                    <div className="md:w-1/3">
-                      <div className="relative w-full h-48 md:h-32 rounded-md overflow-hidden bg-gray-100">
+                    <div className="md:w-2/5">
+                      <div className="relative w-full h-48 md:h-36 rounded-md overflow-hidden bg-gray-100">
                         <img
                           src={article.imageUrl}
                           alt={article.title}
@@ -253,7 +253,7 @@ const PressCoverageCarousel = () => {
                     </div>
                     
                     {/* Article content */}
-                    <div className="md:w-2/3 flex flex-col justify-center">
+                    <div className="md:w-3/5 flex flex-col justify-center">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-sm font-medium text-signal-blue">
                           {article.source}
@@ -265,7 +265,7 @@ const PressCoverageCarousel = () => {
                           {article.date}
                         </span>
                       </div>
-                      <h4 className="font-semibold text-signal-text-strong text-lg leading-tight mb-2">
+                      <h4 className="press-title font-semibold text-signal-text-strong mb-2">
                         {article.title}
                       </h4>
                       <div className="flex items-center text-signal-blue text-sm font-medium">
