@@ -23,7 +23,7 @@ const PRESS_COVERAGE = [
     title: "Bitcoiners voice support for Signal adopting Bitcoin",
     source: "Cointelegraph",
     url: "https://cointelegraph.com/news/bitcoiners-voice-support-signal-adopting-bitcoin",
-    imageUrl: "https://cointelegraph.com/magazine/wp-content/uploads/2024/10/bitcoin-signal-messenger.jpg",
+    imageUrl: "/press-cointelegraph.jpg",
     date: "October 2024"
   },
   {
@@ -31,15 +31,15 @@ const PRESS_COVERAGE = [
     title: "Bitcoin for Signal – Cashu ermöglicht anonyme BTC-Zahlungen in der Messenger-App",
     source: "Blocktrainer",
     url: "https://www.blocktrainer.de/blog/bitcoin-for-signal-cashu-ermoeglicht-anonyme-btc-zahlungen-in-der-messenger-app",
-    imageUrl: "https://www.blocktrainer.de/blog/wp-content/uploads/2024/10/bitcoin-for-signal-cashu.jpg",
+    imageUrl: "/press-blocktrainer.jpg",
     date: "October 2024"
   },
   {
-    id: "thestreet",
-    title: "Jack Dorsey's WhatsApp rival Signal could get Bitcoin payments",
-    source: "TheStreet",
-    url: "https://www.thestreet.com/crypto/jack-dorsey-whatsapp-rival-signal-bitcoin-payments",
-    imageUrl: "https://www.thestreet.com/.image/t_share/MTk0NDQ4NzQ0NzQ0NzQ0NzQ0/signal-bitcoin-payments.jpg",
+    id: "yahoo",
+    title: "Jack Dorsey wants WhatsApp rival to use Bitcoin",
+    source: "Yahoo Finance",
+    url: "https://finance.yahoo.com/news/jack-dorsey-wants-whatsapp-rival-003149326.html",
+    imageUrl: "/press-yahoo.jpg",
     date: "October 2024"
   },
   {
@@ -47,7 +47,7 @@ const PRESS_COVERAGE = [
     title: "Sondermünze: Bitcoin for Signal",
     source: "Münzweg Podcast",
     url: "https://fountain.fm/episode/Rgr8bodF4INXipOxoFDD",
-    imageUrl: "https://fountain.fm/episode/Rgr8bodF4INXipOxoFDD/cover.jpg",
+    imageUrl: "/press-fountain.jpg",
     date: "October 2024"
   }
 ];
