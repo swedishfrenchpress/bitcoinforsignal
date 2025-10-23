@@ -45,6 +45,14 @@ const PRESS_COVERAGE = [
     source: "Münzweg Podcast",
     url: "https://fountain.fm/episode/Rgr8bodF4INXipOxoFDD",
     imageUrl: "/press-fountain.jpg"
+  },
+  {
+    id: "youtube",
+    title: "Bitcoin on Signal: Privacy, Custody, and Product Reality",
+    source: "YouTube",
+    url: "https://www.youtube.com/watch?v=Jb0iYD4Meu4",
+    imageUrl: "/press-bp.jpg",
+    type: "video"
   }
 ];
 
@@ -257,6 +265,20 @@ const PressCoverageCarousel = () => {
                             e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280' font-family='Arial, sans-serif' font-size='14'%3EArticle Image%3C/text%3E%3C/svg%3E";
                           }}
                         />
+                        {/* Play icon overlay for videos */}
+                        {article.type === "video" && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                            <div className="bg-white/90 rounded-full p-3 shadow-lg">
+                              <svg
+                                className="w-6 h-6 text-signal-blue"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                     
@@ -271,7 +293,8 @@ const PressCoverageCarousel = () => {
                         {article.title}
                       </h4>
                       <div className="flex items-center text-signal-blue text-sm font-medium">
-                        {article.id === "fountain" ? "Listen to Podcast" : "Read Article"}
+                        {article.id === "fountain" ? "Listen to Podcast" : 
+                         article.type === "video" ? "Watch Video" : "Read Article"}
                         <svg
                           className="w-4 h-4 ml-1"
                           fill="none"
