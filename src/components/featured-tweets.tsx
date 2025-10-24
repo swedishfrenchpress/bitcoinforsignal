@@ -29,7 +29,7 @@ export function FeaturedTweets() {
   return (
     <div className="py-12 flex flex-col">
       {/* Header */}
-      <div className="w-full text-center space-y-4 mb-12">
+      <div className="w-full text-center space-y-4 mb-2">
         <h2 className="!text-signal-blue">What People Are Saying</h2>
         <p className="max-w-3xl mx-auto !text-signal-text">
           The community is excited about bringing Bitcoin to Signal. Here&apos;s
