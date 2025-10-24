@@ -177,6 +177,16 @@ h4 {
   color: #1b1b1b;
 }
 
+/* Press carousel title override */
+.press-title {
+  font-size: 1.25rem !important;
+  line-height: 1.4 !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
+  white-space: normal !important;
+}
+
 @media (min-width: 1024px) {
   h4 {
     font-size: 1.125rem;

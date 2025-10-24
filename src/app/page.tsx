@@ -15,6 +15,47 @@ function toggleMenu() {
   else header?.classList.add("deactivated");
 }
 
+// Press coverage data structure - Easy to add more articles!
+// TO ADD MORE ARTICLES: Simply add a new object to this array
+const PRESS_COVERAGE = [
+  {
+    id: "cointelegraph",
+    title: "Bitcoiners voice support for Signal adopting Bitcoin",
+    source: "Cointelegraph",
+    url: "https://cointelegraph.com/news/bitcoiners-voice-support-signal-adopting-bitcoin",
+    imageUrl: "/press-cointelegraph.jpg"
+  },
+  {
+    id: "blocktrainer",
+    title: "Bitcoin for Signal – Cashu ermöglicht anonyme BTC-Zahlungen in der Messenger-App",
+    source: "Blocktrainer",
+    url: "https://www.blocktrainer.de/blog/bitcoin-for-signal-cashu-ermoeglicht-anonyme-btc-zahlungen-in-der-messenger-app",
+    imageUrl: "/press-blocktrainer.jpg"
+  },
+  {
+    id: "yahoo",
+    title: "Jack Dorsey wants WhatsApp rival to use Bitcoin",
+    source: "Yahoo Finance",
+    url: "https://finance.yahoo.com/news/jack-dorsey-wants-whatsapp-rival-003149326.html",
+    imageUrl: "/press-yahoo.jpg"
+  },
+  {
+    id: "fountain",
+    title: "Sondermünze: Bitcoin for Signal",
+    source: "Münzweg Podcast",
+    url: "https://fountain.fm/episode/Rgr8bodF4INXipOxoFDD",
+    imageUrl: "/press-fountain.jpg"
+  },
+  {
+    id: "youtube",
+    title: "Bitcoin on Signal: Privacy, Custody, and Product Reality",
+    source: "YouTube",
+    url: "https://www.youtube.com/watch?v=Jb0iYD4Meu4",
+    imageUrl: "/press-bp.jpg",
+    type: "video"
+  }
+];
+
 // Shareable assets data structure - Easy to add more designs and platforms!
 // TO ADD MORE DESIGNS: Simply add a new object to this array with your image filenames
 const SHAREABLE_ASSETS = [
@@ -151,6 +192,180 @@ const DownloadableAsset = ({
     <span className="text-sm font-medium text-signal-text">{platform}</span>
   </div>
 );
+
+// Press coverage carousel component
+const PressCoverageCarousel = () => {
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = React.useState(true);
+  const [isTransitioning, setIsTransitioning] = React.useState(true);
+
+  // Create duplicated slides for seamless infinite loop
+  const duplicatedSlides = [...PRESS_COVERAGE, ...PRESS_COVERAGE];
+
+  // Auto-scroll functionality
+  React.useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }, 6000); // Change slide every 6 seconds (slower)
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
+
+  // Handle infinite loop reset
+  React.useEffect(() => {
+    if (currentIndex >= PRESS_COVERAGE.length) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+        setTimeout(() => setIsTransitioning(true), 50);
+      }, 1000); // Wait for transition to complete
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? PRESS_COVERAGE.length - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <div className="relative w-full max-w-4xl mx-auto">
+      {/* Carousel container */}
+      <div className="relative overflow-hidden rounded-lg">
+        <div 
+          className={`flex ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {duplicatedSlides.map((article, index) => (
+            <div key={`${article.id}-${index}`} className="w-full flex-shrink-0">
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="bg-signal-bg border border-signal-border-weak p-4 rounded-md hover:shadow-md transition-shadow duration-300 h-[380px] md:h-[200px]">
+                  <div className="flex flex-col md:flex-row gap-4 h-full md:items-center">
+                    {/* Article image */}
+                    <div className="md:w-2/5">
+                      <div className="relative w-full h-48 md:h-36 rounded-md overflow-hidden bg-gray-100">
+                        <img
+                          src={article.imageUrl}
+                          alt={article.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to a placeholder if image fails to load
+                            e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280' font-family='Arial, sans-serif' font-size='14'%3EArticle Image%3C/text%3E%3C/svg%3E";
+                          }}
+                        />
+                        {/* Play icon overlay for videos */}
+                        {article.type === "video" && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                            <div className="bg-white/90 rounded-full p-3 shadow-lg">
+                              <svg
+                                className="w-6 h-6 text-signal-blue"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {/* Article content */}
+                    <div className="md:w-3/5 flex flex-col justify-center h-full">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-sm font-medium text-signal-blue">
+                          {article.source}
+                        </span>
+                      </div>
+                      <h4 className="press-title font-semibold text-signal-text-strong mb-2">
+                        {article.title}
+                      </h4>
+                      <div className="flex items-center text-signal-blue text-sm font-medium">
+                        {article.id === "fountain" ? "Listen to Podcast" : 
+                         article.type === "video" ? "Watch Video" : "Read Article"}
+                        <svg
+                          className="w-4 h-4 ml-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation arrows */}
+      <button
+        onClick={prevSlide}
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white border border-signal-border-weak rounded-full p-2 shadow-md transition-all duration-200 hover:shadow-lg"
+        aria-label="Previous article"
+      >
+        <svg className="w-5 h-5 text-signal-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        onMouseEnter={() => setIsAutoPlaying(false)}
+        onMouseLeave={() => setIsAutoPlaying(true)}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white border border-signal-border-weak rounded-full p-2 shadow-md transition-all duration-200 hover:shadow-lg"
+        aria-label="Next article"
+      >
+        <svg className="w-5 h-5 text-signal-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Dots indicator */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {PRESS_COVERAGE.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setCurrentIndex(index);
+              setIsAutoPlaying(false);
+            }}
+            onMouseEnter={() => setIsAutoPlaying(false)}
+            onMouseLeave={() => setIsAutoPlaying(true)}
+            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+              index === (currentIndex % PRESS_COVERAGE.length)
+                ? 'bg-signal-blue w-6' 
+                : 'bg-signal-border hover:bg-signal-text-weak'
+            }`}
+            aria-label={`Go to article ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>) {
   e.preventDefault();
@@ -307,6 +522,11 @@ export default function Home() {
               <li>
                 <a href="#faq" onClick={scrollToSection}>
                   FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#press" onClick={scrollToSection}>
+                  Press
                 </a>
               </li>
             </ul>
@@ -1156,6 +1376,21 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Press Coverage Section */}
+        <div className="container mx-auto px-12 max-w-screen-xl py-16" id="press">
+          <div className="text-center mb-12">
+            <h2 className="!text-signal-blue mb-4">
+              In The Press
+            </h2>
+            <p className="max-w-3xl mx-auto text-lg text-signal-text">
+              Bitcoin for Signal has been featured in leading publications and podcasts, 
+              highlighting the growing interest in private Bitcoin payments within Signal.
+            </p>
+          </div>
+          
+          <PressCoverageCarousel />
         </div>
       </main>
 
